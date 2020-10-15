@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from 'react'
 
 import {
     ZoomableGroup,
@@ -7,12 +7,13 @@ import {
     Geography
 } from "react-simple-maps";
 
-const geoUrl = "./usmap.json";
+const geoUrl = "./alaska_and_hawaii.json";
 
-const MapChart = () => {
+
+export default function AlaskaMap() {
     return (
-        <div className="map">
-            <ComposableMap className="us-map" data-tip="" height={90} width={70} projection="geoAlbers" projectionConfig={{ scale: 175 }}>
+        <div>
+            <ComposableMap data-tip="" className="alaska" projection="geoAlbers" projectionConfig={{ scale: 200 }}>
                 <Geographies geography={geoUrl}>
                     {({ geographies }) =>
                     geographies.map(geo => ( 
@@ -48,7 +49,5 @@ const MapChart = () => {
                 </Geographies>
             </ComposableMap>
         </div>
-    );
-};
-
-export default memo(MapChart);
+    )
+}

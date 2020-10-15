@@ -6,10 +6,24 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
-svg.rsm-svg {
-  height: 300px;
-  width: 500px;
+.map-container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 300px [usmap-start] 1fr [usmap-end] 300px;
+  grid-template-rows:  [usmap-start] 250px 150px [usmap-end]
+}
+
+svg.rsm-svg.us-map {
+  
+}
+
+svg.rsm-svg.us-map {
+  /* height: 550px; */
+  /* width: 900px; */
+  height: 425px;
+  width: 625px;
+  grid-area: usmap;
 }
