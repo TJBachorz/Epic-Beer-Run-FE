@@ -1,15 +1,16 @@
-import React from 'react'
+import React, {memo} from 'react'
 
 import AlaskaMap from './AlaskaMap'
 import HawaiiMap from './HawaiiMap'
-import MapChart from './MapChart'
+import USMap from './USMap'
+import NEMap from './NEMap'
 
 export default function MapContainer() {
     return (
         <div className="map-container">
             <AlaskaMap className="alaska"/>
-            <MapChart/>
-            <h1>NEMAP placeholder</h1>
+            <USMap/>
+            <NEMap/>
             <HawaiiMap/>
         </div>
     )

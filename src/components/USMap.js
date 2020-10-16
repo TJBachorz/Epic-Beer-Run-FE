@@ -26,8 +26,8 @@ const MapChart = () => {
                         <Geography
                         key={geo.rsmKey}
                         geography={geo}
-                        className={geo.properties.NAME_1}
-                        onClick={(event) => console.log(event.target.className.baseVal.split(" ")[1]) }
+                        className={geo.properties.NAME_1.split(" ").join("-")}
+                        onClick={(event) => console.log(event.target.className.baseVal.split(" ")[1].split("-").join(" ")) }
                         // onMouseEnter={() => {
                         //     // const { NAME_1} = geo.properties;
                         //     // setTooltipContent(`${NAME_1}`);

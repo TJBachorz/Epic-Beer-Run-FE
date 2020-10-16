@@ -13,8 +13,16 @@ const geoUrl = "./alaska_and_hawaii.json";
 export default function AlaskaMap() {
     return (
         <div>
-            <ComposableMap data-tip="" className="alaska" projection="geoAlbers" projectionConfig={{ scale: 1100 }}>
-                <ZoomableGroup center={[-150, 55]} minZoom={1} maxZoom={1} translateExtent={[[-300, 15], [-300, 15]]}>
+            <ComposableMap 
+                data-tip="" 
+                className="alaska" 
+                projection="geoAlbers" 
+                projectionConfig={{ scale: 1100 }}> {/* 1100 */}
+                <ZoomableGroup 
+                    center={[-150, 55]} 
+                    minZoom={1} 
+                    maxZoom={1} 
+                >
                     <Geographies geography={geoUrl}>
                         {({ geographies }) =>
                         geographies.map(geo => ( 

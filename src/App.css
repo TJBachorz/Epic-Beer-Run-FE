@@ -27,3 +27,8 @@ svg.rsm-svg.us-map {
   width: 625px;
   grid-area: usmap;
 }
+
+.nemap{
+  height: 350px;
+  width: 240px;
+}

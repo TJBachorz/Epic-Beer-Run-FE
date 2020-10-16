@@ -9,7 +9,6 @@ import {
 
 const geoUrl = "./alaska_and_hawaii.json";
 
-
 export default function HawaiiMap() {
     return (
         <div>
