@@ -12,7 +12,14 @@ const geoUrl = "./usmap.json";
 const MapChart = () => {
     return (
         <div className="map">
-            <ComposableMap className="us-map" data-tip="" height={90} width={70} projection="geoAlbers" projectionConfig={{ scale: 175 }}>
+            <ComposableMap 
+                className="us-map" 
+                data-tip="" 
+                height={90} 
+                width={70} 
+                projection="geoAlbers" 
+                projectionConfig={{ scale: 175 }}
+            >
                 <Geographies geography={geoUrl}>
                     {({ geographies }) =>
                     geographies.map(geo => ( 

@@ -16,8 +16,8 @@ header {
   grid-template-rows:  [usmap-start] 250px 150px [usmap-end]
 }
 
-svg.rsm-svg.us-map {
-  
+.rsm-geography.Hawaii {
+  transform: rotate(-35deg);
 }
 
 svg.rsm-svg.us-map {
