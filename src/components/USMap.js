@@ -2,7 +2,6 @@ import React from "react";
 
 import {
     Marker,
-    ZoomableGroup,
     ComposableMap,
     Geographies,
     Geography

@@ -23,23 +23,29 @@ function App() {
       .then(data => setBreweryDB(data))
   }
 
-  const filterOutCoordinates = (brewery) => {
-    return coordinates.filter(
-      coordinate => (coordinate[0] !== brewery.longitude) && (coordinate[1] !== brewery.latitude)
+  const filterOutCoordinates = (longitude, latitude) => {
+    return coordinates
+      .filter(coordinate => {
+        return (coordinate[0] !== longitude) 
+          && (coordinate[1] !== latitude)
+      }
     )
   }
 
-  const findBreweryCoordinates = (brewery) => {
-    return coordinates.find(
-      coordinate => (coordinate[0] === brewery.longitude) && (coordinate[1] === brewery.latitude)
+  const findBreweryCoordinates = (longitude, latitude) => {
+    return coordinates
+      .find(coordinate => {
+        return (coordinate[0] === longitude) 
+          && (coordinate[1] === latitude)
+      }
     )
   }
 
-  const logCoordinates = (brewery) => {
-    if (!findBreweryCoordinates(brewery)) {
-      setCoordinates([...coordinates, [brewery.longitude, brewery.latitude]])
+  const logCoordinates = ({longitude, latitude}) => {
+    if (!findBreweryCoordinates(longitude, latitude)) {
+      setCoordinates([...coordinates, [longitude, latitude]])
     } else {
-      setCoordinates(filterOutCoordinates(brewery))
+      setCoordinates(filterOutCoordinates(longitude, latitude))
     }
   }
 

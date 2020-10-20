@@ -34,42 +34,45 @@ export default function NEMap({setSelectedState, coordinates}) {
 
     return (
         <div>
-            <ComposableMap data-tip="" className="nemap" projection={"geoAlbers"} projectionConfig={ {scale: 1800} }>
-                <ZoomableGroup zoom={3} minZoom={3} maxZoom={3} center={[-74, -222]}>
-                    <Geographies geography={geoUrl}>
-                        {({ geographies }) =>
-                        geographies.map(geo => ( 
-                            <Geography
-                            key={geo.rsmKey}
-                            geography={geo}
-                            className={geo.properties.gn_name.split(" ").join("-")}
-                            onClick={handleStateClick}
-                            // onMouseEnter={() => {
-                            //     // const { NAME_1} = geo.properties;
-                            //     // setTooltipContent(`${NAME_1}`);
-                            // }}
-                            // onMouseLeave={() => {
-                            //     setTooltipContent("");
-                            // }}
-                            style={{
-                                default: {
-                                fill: "#104547",
-                                outline: "none"
-                                },
-                                hover: {
-                                fill: "#23C9FF",
-                                outline: "none"
-                                },
-                                pressed: {
-                                fill: "#E42",
-                                outline: "none"
-                                }
-                            }}
-                            />
-                        ))
-                        }
-                    </Geographies>
-                </ZoomableGroup>
+            <ComposableMap 
+                className="nemap" 
+                projection={"geoAlbers"}
+                height={125}
+                width={120}
+                projectionConfig={ {center:[23, -222], scale: 800} }>
+                <Geographies geography={geoUrl}>
+                    {({ geographies }) =>
+                    geographies.map(geo => ( 
+                        <Geography
+                        key={geo.rsmKey}
+                        geography={geo}
+                        className={geo.properties.gn_name.split(" ").join("-")}
+                        onClick={handleStateClick}
+                        // onMouseEnter={() => {
+                        //     // const { NAME_1} = geo.properties;
+                        //     // setTooltipContent(`${NAME_1}`);
+                        // }}
+                        // onMouseLeave={() => {
+                        //     setTooltipContent("");
+                        // }}
+                        style={{
+                            default: {
+                            fill: "#104547",
+                            outline: "none"
+                            },
+                            hover: {
+                            fill: "#23C9FF",
+                            outline: "none"
+                            },
+                            pressed: {
+                            fill: "#E42",
+                            outline: "none"
+                            }
+                        }}
+                        />
+                    ))
+                    }
+                </Geographies>
                 {setMarkers()}
             </ComposableMap>
         </div>
