@@ -5,13 +5,29 @@ import HawaiiMap from './HawaiiMap'
 import USMap from './USMap'
 import NEMap from './NEMap'
 
-export default function MapContainer({setSelectedState}) {
+export default function MapContainer({setSelectedState, coordinates}) {
     return (
         <div className="map-container">
-            <AlaskaMap className="alaska" setSelectedState={setSelectedState}/>
-            <USMap className="us-map" setSelectedState={setSelectedState}/>
-            <NEMap className="ne-map" setSelectedState={setSelectedState}/>
-            <HawaiiMap className="hawaii-map" setSelectedState={setSelectedState}/>
+            <AlaskaMap 
+                className="alaska" 
+                setSelectedState={setSelectedState}
+                coordinates={coordinates}
+            />
+            <USMap 
+                className="us-map" 
+                setSelectedState={setSelectedState}
+                coordinates={coordinates}
+            />
+            <NEMap 
+                className="ne-map" 
+                setSelectedState={setSelectedState}
+                coordinates={coordinates}
+            />
+            <HawaiiMap 
+                className="hawaii-map" 
+                setSelectedState={setSelectedState}
+                coordinates={coordinates}
+            />
         </div>
     )
 }

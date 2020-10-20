@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {
+    Marker,
     ZoomableGroup,
     ComposableMap,
     Geographies,
@@ -36,11 +37,11 @@ export default function HawaiiMap({setSelectedState}) {
                             // }}
                             style={{
                                 default: {
-                                fill: "#E42",
+                                fill: "#104547",
                                 outline: "none"
                                 },
                                 hover: {
-                                fill: "black",
+                                fill: "#23C9FF",
                                 outline: "none"
                                 },
                                 pressed: {

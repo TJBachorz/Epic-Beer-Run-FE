@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {
+    Marker,
     ZoomableGroup,
     ComposableMap,
     Geographies,
@@ -9,7 +10,7 @@ import {
 
 const geoUrl = './maps/nemap.json'
 
-export default function NEMap({setSelectedState}) {
+export default function NEMap({setSelectedState, coordinates}) {
 
     const handleStateClick = (event) => {
         let clickedState = (
@@ -19,6 +20,16 @@ export default function NEMap({setSelectedState}) {
             .join(" ")
         )
         setSelectedState(clickedState)
+    }
+
+    const setMarkers = () => {
+        return coordinates.map(coordinate => {
+            return (
+                <Marker coordinates={coordinate}>
+                    <circle r={1} fill="#E42" />
+                </Marker>
+                )
+        })
     }
 
     return (
@@ -42,11 +53,11 @@ export default function NEMap({setSelectedState}) {
                             // }}
                             style={{
                                 default: {
-                                fill: "#E42",
+                                fill: "#104547",
                                 outline: "none"
                                 },
                                 hover: {
-                                fill: "black",
+                                fill: "#23C9FF",
                                 outline: "none"
                                 },
                                 pressed: {
@@ -59,6 +70,7 @@ export default function NEMap({setSelectedState}) {
                         }
                     </Geographies>
                 </ZoomableGroup>
+                {setMarkers()}
             </ComposableMap>
         </div>
     )

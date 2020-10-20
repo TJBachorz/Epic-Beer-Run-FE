@@ -11,7 +11,7 @@ function App() {
   const baseURL = "http://localhost:3000/breweries"
   const [selectedState, setSelectedState] = useState("")
   const [breweryDB, setBreweryDB] = useState([])
-  // const [breweriesByState, setBreweriesByState] = useState({})
+  const [coordinates, setCoordinates] = useState([])
 
   useEffect(() => {
     fetchDataAndSetState()
@@ -20,17 +20,41 @@ function App() {
   const fetchDataAndSetState = async () => {
     await fetch(baseURL)
       .then(response => response.json())
-      .then(data => setBreweryDB({breweryDB: data}))
+      .then(data => setBreweryDB(data))
   }
-  // const changeState = (clickedState) => {
-  //   setSelectedState(clickedState)
-  // }
+
+  const filterOutCoordinates = (brewery) => {
+    return coordinates.filter(
+      coordinate => (coordinate[0] !== brewery.longitude) && (coordinate[1] !== brewery.latitude)
+    )
+  }
+
+  const findBreweryCoordinates = (brewery) => {
+    return coordinates.find(
+      coordinate => (coordinate[0] === brewery.longitude) && (coordinate[1] === brewery.latitude)
+    )
+  }
+
+  const logCoordinates = (brewery) => {
+    if (!findBreweryCoordinates(brewery)) {
+      setCoordinates([...coordinates, [brewery.longitude, brewery.latitude]])
+    } else {
+      setCoordinates(filterOutCoordinates(brewery))
+    }
+  }
 
   return (
     <div className="App">
       <Header/>
-      <MapContainer setSelectedState={setSelectedState}/>
-      <BreweryListing breweries={breweryDB} selectedState={selectedState}/>
+      <MapContainer 
+        setSelectedState={setSelectedState} 
+        coordinates={coordinates}
+      />
+      <BreweryListing 
+        breweries={breweryDB} 
+        selectedState={selectedState}
+        logCoordinates={logCoordinates}
+      />
     </div>
   );
 }

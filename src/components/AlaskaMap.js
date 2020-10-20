@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {
+    Marker,
     ZoomableGroup,
     ComposableMap,
     Geographies,
@@ -23,7 +24,8 @@ export default function AlaskaMap({setSelectedState}) {
                 data-tip="" 
                 className="alaska" 
                 projection="geoAlbers" 
-                projectionConfig={{ scale: 1100 }}> {/* 1100 */}
+                projectionConfig={{ scale: 1100 }}
+            >
                 <ZoomableGroup 
                     center={[-150, 55]} 
                     minZoom={1} 
@@ -46,11 +48,11 @@ export default function AlaskaMap({setSelectedState}) {
                             // }}
                             style={{
                                 default: {
-                                fill: "#E42",
+                                fill: "#104547",
                                 outline: "none"
                                 },
                                 hover: {
-                                fill: "black",
+                                fill: "#23C9FF",
                                 outline: "none"
                                 },
                                 pressed: {

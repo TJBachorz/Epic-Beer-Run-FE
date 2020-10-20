@@ -1,5 +1,25 @@
 header {
-  height: 150px;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #23C9FF;
+  color: black;
+  margin-bottom: 70px;
+  width: 100vwu;
+}
+
+.slogan {
+  font-size: 12px;
+}
+
+.disclaimer {
+  color: lightgrey;
+}
+
+.use-explanation {
+  margin-bottom: 0px;
 }
 
 .map {
