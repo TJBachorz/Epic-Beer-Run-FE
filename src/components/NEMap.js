@@ -7,7 +7,7 @@ import {
     Geography
 } from "react-simple-maps";
 
-const geoUrl = './nemap.json'
+const geoUrl = './maps/nemap.json'
 
 export default function NEMap() {
     return (

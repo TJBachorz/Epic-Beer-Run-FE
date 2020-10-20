@@ -7,7 +7,7 @@ import {
     Geography
 } from "react-simple-maps";
 
-const geoUrl = "./usmap.json";
+const geoUrl = "./maps/usmap.json";
 
 const MapChart = () => {
     return (

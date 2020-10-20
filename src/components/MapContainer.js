@@ -9,9 +9,9 @@ export default function MapContainer() {
     return (
         <div className="map-container">
             <AlaskaMap className="alaska"/>
-            <USMap/>
-            <NEMap/>
-            <HawaiiMap/>
+            <USMap className="us-map"/>
+            <NEMap className="ne-map"/>
+            <HawaiiMap className="hawaii-map"/>
         </div>
     )
 }

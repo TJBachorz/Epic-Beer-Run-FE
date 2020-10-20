@@ -7,7 +7,7 @@ import {
     Geography
 } from "react-simple-maps";
 
-const geoUrl = "./alaska_and_hawaii.json";
+const geoUrl = "./maps/alaska_and_hawaii.json";
 
 
 export default function AlaskaMap() {
