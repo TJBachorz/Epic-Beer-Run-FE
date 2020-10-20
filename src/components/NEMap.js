@@ -9,7 +9,18 @@ import {
 
 const geoUrl = './maps/nemap.json'
 
-export default function NEMap() {
+export default function NEMap({setSelectedState}) {
+
+    const handleStateClick = (event) => {
+        let clickedState = (
+            event.target.className.baseVal.
+            split(" ")[1]
+            .split("-")
+            .join(" ")
+        )
+        setSelectedState(clickedState)
+    }
+
     return (
         <div>
             <ComposableMap data-tip="" className="nemap" projection={"geoAlbers"} projectionConfig={ {scale: 1800} }>

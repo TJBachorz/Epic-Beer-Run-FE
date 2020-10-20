@@ -1,9 +1,19 @@
 import React from 'react'
 
-export default function BreweryListing() {
+import BreweryCard from './BreweryCard'
+
+export default function BreweryListing({breweries}) {
+
+
+    // const cardMap = () => {
+    //     return breweries.map(brewery => {
+    //         return <BreweryCard key={brewery.id} brewery={brewery}/>
+    //     })
+    // }
+
     return (
-        <div>
-            
+        <div className="breweries-card-container">
+            {/* {cardMap()} */}
         </div>
     )
 }

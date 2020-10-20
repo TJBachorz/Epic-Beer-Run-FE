@@ -11,6 +11,7 @@ function App() {
   const baseURL = "http://localhost:3000/breweries"
   const [selectedState, setSelectedState] = useState("")
   const [breweryDB, setBreweryDB] = useState([])
+  const [breweriesByState, setBreweriesByState] = useState({})
 
   useEffect(() => {
     fetch(baseURL)
@@ -19,14 +20,13 @@ function App() {
   }, [])
 
   const changeState = (clickedState) => {
-    setSelectedState(selectedState = clickedState)
-    
+    setSelectedState(clickedState)
   }
 
   return (
     <div className="App">
       <Header/>
-      <MapContainer/>
+      <MapContainer setSelectedState={setSelectedState}/>
       <BreweryListing/>
     </div>
   );

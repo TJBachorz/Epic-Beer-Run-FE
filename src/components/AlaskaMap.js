@@ -10,7 +10,13 @@ import {
 const geoUrl = "./maps/alaska_and_hawaii.json";
 
 
-export default function AlaskaMap() {
+export default function AlaskaMap({setSelectedState}) {
+
+    const handleStateClick = (event) => {
+        let clickedState = event.target.className.baseVal.split(" ")[1]
+        setSelectedState(clickedState)
+    }
+
     return (
         <div>
             <ComposableMap 
@@ -30,7 +36,7 @@ export default function AlaskaMap() {
                             key={geo.rsmKey}
                             geography={geo}
                             className={geo.properties.abbrev}
-                            onClick={(event) => console.log(event.target.className.baseVal.split(" ")[1]) }
+                            onClick={handleStateClick}
                             // onMouseEnter={() => {
                             //     // const { NAME_1} = geo.properties;
                             //     // setTooltipContent(`${NAME_1}`);

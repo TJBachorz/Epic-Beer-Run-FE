@@ -9,7 +9,13 @@ import {
 
 const geoUrl = "./maps/usmap.json";
 
-const MapChart = () => {
+const USMap = ({setSelectedState}) => {
+
+    const handleStateClick = (event) => {
+        let clickedState = event.target.className.baseVal.split(" ")[1].split("-").join(" ")
+        setSelectedState(clickedState)
+    }
+
     return (
         <div className="map">
             <ComposableMap 
@@ -27,7 +33,7 @@ const MapChart = () => {
                         key={geo.rsmKey}
                         geography={geo}
                         className={geo.properties.NAME_1.split(" ").join("-")}
-                        onClick={(event) => console.log(event.target.className.baseVal.split(" ")[1].split("-").join(" ")) }
+                        onClick={handleStateClick}
                         // onMouseEnter={() => {
                         //     // const { NAME_1} = geo.properties;
                         //     // setTooltipContent(`${NAME_1}`);
@@ -58,4 +64,4 @@ const MapChart = () => {
     );
 };
 
-export default memo(MapChart);
+export default memo(USMap);
