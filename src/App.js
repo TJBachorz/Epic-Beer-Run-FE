@@ -11,23 +11,26 @@ function App() {
   const baseURL = "http://localhost:3000/breweries"
   const [selectedState, setSelectedState] = useState("")
   const [breweryDB, setBreweryDB] = useState([])
-  const [breweriesByState, setBreweriesByState] = useState({})
+  // const [breweriesByState, setBreweriesByState] = useState({})
 
   useEffect(() => {
-    fetch(baseURL)
-      .then(response => response.json())
-      .then(data => setBreweryDB({breweryDB: data}))
+    fetchDataAndSetState()
   }, [])
 
-  const changeState = (clickedState) => {
-    setSelectedState(clickedState)
+  const fetchDataAndSetState = async () => {
+    await fetch(baseURL)
+      .then(response => response.json())
+      .then(data => setBreweryDB({breweryDB: data}))
   }
+  // const changeState = (clickedState) => {
+  //   setSelectedState(clickedState)
+  // }
 
   return (
     <div className="App">
       <Header/>
       <MapContainer setSelectedState={setSelectedState}/>
-      <BreweryListing/>
+      <BreweryListing breweries={breweryDB} selectedState={selectedState}/>
     </div>
   );
 }

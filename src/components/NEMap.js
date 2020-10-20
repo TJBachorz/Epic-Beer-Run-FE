@@ -13,8 +13,8 @@ export default function NEMap({setSelectedState}) {
 
     const handleStateClick = (event) => {
         let clickedState = (
-            event.target.className.baseVal.
-            split(" ")[1]
+            event.target.className.baseVal
+            .split(" ")[1]
             .split("-")
             .join(" ")
         )
@@ -24,7 +24,7 @@ export default function NEMap({setSelectedState}) {
     return (
         <div>
             <ComposableMap data-tip="" className="nemap" projection={"geoAlbers"} projectionConfig={ {scale: 1800} }>
-                <ZoomableGroup zoom={3} center={[-74, -222]}>
+                <ZoomableGroup zoom={3} minZoom={3} maxZoom={3} center={[-74, -222]}>
                     <Geographies geography={geoUrl}>
                         {({ geographies }) =>
                         geographies.map(geo => ( 
@@ -32,7 +32,7 @@ export default function NEMap({setSelectedState}) {
                             key={geo.rsmKey}
                             geography={geo}
                             className={geo.properties.gn_name.split(" ").join("-")}
-                            onClick={(event) => console.log(event.target.className.baseVal.split(" ")[1].split("-").join(" ")) }
+                            onClick={handleStateClick}
                             // onMouseEnter={() => {
                             //     // const { NAME_1} = geo.properties;
                             //     // setTooltipContent(`${NAME_1}`);

@@ -9,7 +9,12 @@ import {
 
 const geoUrl = "./maps/alaska_and_hawaii.json";
 
-export default function HawaiiMap() {
+export default function HawaiiMap({setSelectedState}) {
+
+    const handleStateClick = (event) => {
+        let clickedState = event.target.className.baseVal.split(" ")[1]
+        setSelectedState(clickedState)
+    }
     return (
         <div>
             <ComposableMap data-tip="" className="hawaii" projection={"geoAlbers"} projectionConfig={ {scale:1100} }>
@@ -21,7 +26,7 @@ export default function HawaiiMap() {
                             key={geo.rsmKey}
                             geography={geo}
                             className={geo.properties.abbrev}
-                            onClick={(event) => console.log(event.target.className.baseVal.split(" ")[1]) }
+                            onClick={handleStateClick}
                             // onMouseEnter={() => {
                             //     // const { NAME_1} = geo.properties;
                             //     // setTooltipContent(`${NAME_1}`);

@@ -12,7 +12,12 @@ const geoUrl = "./maps/usmap.json";
 const USMap = ({setSelectedState}) => {
 
     const handleStateClick = (event) => {
-        let clickedState = event.target.className.baseVal.split(" ")[1].split("-").join(" ")
+        let clickedState = (
+            event.target.className.baseVal
+            .split(" ")[1]
+            .split("-")
+            .join(" ")
+        )
         setSelectedState(clickedState)
     }
 

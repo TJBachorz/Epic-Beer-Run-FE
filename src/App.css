@@ -32,3 +32,19 @@ svg.rsm-svg.us-map {
   height: 350px;
   width: 240px;
 }
+
+.breweries-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+}
+
+.card, .grid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border: 2px solid black;
+}
