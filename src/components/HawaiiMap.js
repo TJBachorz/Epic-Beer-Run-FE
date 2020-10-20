@@ -18,42 +18,46 @@ export default function HawaiiMap({setSelectedState}) {
     }
     return (
         <div>
-            <ComposableMap data-tip="" className="hawaii" projection={"geoAlbers"} projectionConfig={ {scale:1100} }>
-                <ZoomableGroup zoom={3} center={[-135, -190]}>
-                    <Geographies geography={geoUrl}>
-                        {({ geographies }) =>
-                        geographies.map(geo => ( 
-                            <Geography
-                            key={geo.rsmKey}
-                            geography={geo}
-                            className={geo.properties.abbrev}
-                            onClick={handleStateClick}
-                            // onMouseEnter={() => {
-                            //     // const { NAME_1} = geo.properties;
-                            //     // setTooltipContent(`${NAME_1}`);
-                            // }}
-                            // onMouseLeave={() => {
-                            //     setTooltipContent("");
-                            // }}
-                            style={{
-                                default: {
-                                fill: "#104547",
-                                outline: "none"
-                                },
-                                hover: {
-                                fill: "#23C9FF",
-                                outline: "none"
-                                },
-                                pressed: {
-                                fill: "#E42",
-                                outline: "none"
-                                }
-                            }}
-                            />
-                        ))
-                        }
-                    </Geographies>
-                </ZoomableGroup>
+            <ComposableMap 
+                className="hawaii" 
+                projection={"geoAlbers"} 
+                height={325}
+                width={320}
+                projectionConfig={{center:[-60, -337], scale:1500}}
+            >
+                <Geographies geography={geoUrl}>
+                    {({ geographies }) =>
+                    geographies.map(geo => ( 
+                        <Geography
+                        key={geo.rsmKey}
+                        geography={geo}
+                        className={geo.properties.abbrev}
+                        onClick={handleStateClick}
+                        // onMouseEnter={() => {
+                        //     // const { NAME_1} = geo.properties;
+                        //     // setTooltipContent(`${NAME_1}`);
+                        // }}
+                        // onMouseLeave={() => {
+                        //     setTooltipContent("");
+                        // }}
+                        style={{
+                            default: {
+                            fill: "#104547",
+                            outline: "none"
+                            },
+                            hover: {
+                            fill: "#23C9FF",
+                            outline: "none"
+                            },
+                            pressed: {
+                            fill: "#E42",
+                            outline: "none"
+                            }
+                        }}
+                        />
+                    ))
+                    }
+                </Geographies>
             </ComposableMap>
         </div>
     )
