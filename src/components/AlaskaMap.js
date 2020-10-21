@@ -10,7 +10,7 @@ import {
 const geoUrl = "./maps/alaska_and_hawaii.json";
 
 
-export default function AlaskaMap({setSelectedState, coordinates}) {
+export default function AlaskaMap({setSelectedState, coordinates, toolTip}) {
 
     const handleStateClick = (event) => {
         let clickedState = event.target.className.baseVal.split(" ")[1]
@@ -20,10 +20,17 @@ export default function AlaskaMap({setSelectedState, coordinates}) {
     const setMarkers = () => {
         return coordinates.map(coordinate => {
             return (
-                <Marker coordinates={coordinate}>
-                    <circle r={1} fill="#E42" />
+                <Marker 
+                    coordinates={coordinate}
+                    onMouseEnter={() => {
+                        toolTip(`${coordinate[2]}`);
+                    }}
+                    onMouseLeave={() => {
+                        toolTip("");
+                    }}>
+                    <circle r={1} fill="#E42"/>    
                 </Marker>
-                )
+            )
         })
     }
 
@@ -44,13 +51,13 @@ export default function AlaskaMap({setSelectedState, coordinates}) {
                         geography={geo}
                         className={geo.properties.abbrev}
                         onClick={handleStateClick}
-                        onMouseEnter={() => {
+                        // onMouseEnter={() => {
                             // const { NAME_1} = geo.properties;
                             // setTooltipContent(`${NAME_1}`);
-                        }}
-                        onMouseLeave={() => {
-                            setTooltipContent("");
-                        }}
+                        // }}
+                        // onMouseLeave={() => {
+                        //     setTooltipContent("");
+                        // }}
                         style={{
                             default: {
                             fill: "#104547",

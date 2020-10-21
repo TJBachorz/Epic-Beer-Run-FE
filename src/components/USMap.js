@@ -7,10 +7,12 @@ import {
     Geography,
     Line
 } from "react-simple-maps";
+import ReactTooltip from "react-tooltip";
+
 
 const geoUrl = "./maps/usmap.json";
 
-const USMap = ({setSelectedState, coordinates}) => {
+const USMap = ({setSelectedState, coordinates, toolTip, toolTipContent}) => {
 
     const handleStateClick = (event) => {
         let clickedState = (
@@ -25,10 +27,17 @@ const USMap = ({setSelectedState, coordinates}) => {
     const setMarkers = () => {
         return coordinates.map(coordinate => {
             return (
-                <Marker coordinates={coordinate}>
-                    <circle r={1} fill="#E42" />
+                <Marker 
+                    coordinates={coordinate}
+                    onMouseEnter={() => {
+                        toolTip(`${coordinate[2]}`);
+                    }}
+                    onMouseLeave={() => {
+                        toolTip("");
+                    }}>
+                    <circle r={1} fill="#E42"/>    
                 </Marker>
-                )
+            )
         })
     }
 
@@ -42,7 +51,7 @@ const USMap = ({setSelectedState, coordinates}) => {
                     <Line
                         from={startPoint}
                         to={endPoint}
-                        stroke="#FF5533"
+                        stroke="#FF9E0A"
                         strokeWidth={1}
                         strokeLinecap="round"
                     /> 
@@ -65,33 +74,36 @@ const USMap = ({setSelectedState, coordinates}) => {
                 <Geographies geography={geoUrl}>
                     {({ geographies }) =>
                     geographies.map(geo => ( 
+                        <>
                         <Geography
-                        key={geo.rsmKey}
-                        geography={geo}
-                        className={geo.properties.NAME_1.split(" ").join("-")}
-                        onClick={handleStateClick}
-                        // onMouseEnter={() => {
-                        //     // const { NAME_1} = geo.properties;
-                        //     // setTooltipContent(`${NAME_1}`);
-                        // }}
-                        // onMouseLeave={() => {
-                        //     setTooltipContent("");
-                        // }}
-                        style={{
-                            default: {
-                            fill: "#104547",
-                            outline: "none"
-                            },
-                            hover: {
-                            fill: "#23C9FF",
-                            outline: "none"
-                            },
-                            pressed: {
-                            fill: "#E42",
-                            outline: "none"
-                            }
-                        }}
-                        />
+                            key={geo.rsmKey}
+                            geography={geo}
+                            className={geo.properties.NAME_1.split(" ").join("-")}
+                            onClick={handleStateClick}
+                            onMouseEnter={() => {
+                                const { NAME_1} = geo.properties;
+                                toolTip(`${NAME_1}`);
+                            }}
+                            onMouseLeave={() => {
+                                toolTip("");
+                            }}
+                            style={{
+                                default: {
+                                fill: "#104547",
+                                outline: "none"
+                                },
+                                hover: {
+                                fill: "#23C9FF",
+                                outline: "none"
+                                },
+                                pressed: {
+                                fill: "#FF9E0A",
+                                outline: "none"
+                                }
+                            }}
+                        /> 
+                        <ReactTooltip>{toolTipContent}</ReactTooltip>
+                        </>
                     ))
                     }
                 </Geographies>

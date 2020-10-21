@@ -18,26 +18,35 @@ export default function MapContainer({setSelectedState, coordinates}) {
                 setSelectedState={setSelectedState}
                 coordinates={coordinates}
                 toolTip={setToolTipContent}
+                toolTipContent={toolTipContent}
             />
             <ReactTooltip>{toolTipContent}</ReactTooltip>
-            <USMap 
+            {<USMap 
                 className="us-map" 
                 setSelectedState={setSelectedState}
                 coordinates={coordinates}
                 toolTip={setToolTipContent}
-            />
+            /> ? <USMap 
+                className="us-map" 
+                setSelectedState={setSelectedState}
+                coordinates={coordinates}
+                toolTip={setToolTipContent}
+                toolTipContent={toolTipContent}
+                /> : <h1>Loading...</h1> }
             <ReactTooltip>{toolTipContent}</ReactTooltip>
             <NEMap 
                 className="ne-map" 
                 setSelectedState={setSelectedState}
                 coordinates={coordinates}
                 toolTip={setToolTipContent}
+                toolTipContent={toolTipContent}
             />
             <ReactTooltip>{toolTipContent}</ReactTooltip>
             <HawaiiMap 
                 className="hawaii-map" 
                 setSelectedState={setSelectedState}
                 coordinates={coordinates}
+                toolTipContent={toolTipContent}
             />
         </div>
     )
