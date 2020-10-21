@@ -43,7 +43,7 @@ function App() {
 
   const logCoordinates = ({longitude, latitude, name}) => {
     if (!findBreweryCoordinates(longitude, latitude)) {
-      setCoordinates([...coordinates, [longitude, latitude]])
+      setCoordinates([...coordinates, [longitude, latitude, name]])
     } else {
       setCoordinates(filterOutCoordinates(longitude, latitude))
     }
@@ -60,6 +60,7 @@ function App() {
         breweries={breweryDB} 
         selectedState={selectedState}
         logCoordinates={logCoordinates}
+        coordinates={coordinates}
       />
     </div>
   );

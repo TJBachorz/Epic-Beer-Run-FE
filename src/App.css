@@ -41,8 +41,6 @@ header {
 }
 
 svg.rsm-svg.us-map {
-  /* height: 550px; */
-  /* width: 900px; */
   height: 425px;
   width: 625px;
   grid-area: usmap;
@@ -55,10 +53,13 @@ svg.rsm-svg.us-map {
 
 .breweries-card-container {
   display: grid;
-  grid-template-columns: repeat(4, 300px);
+  grid-template-columns: repeat(3, 300px);
+  grid-auto-rows: 190px;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
 }
 
-.card, .grid-container {
+.grid-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,5 +67,48 @@ svg.rsm-svg.us-map {
 }
 
 .card {
-  border: 2px solid black;
+  background-image: url("./post-card.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px #888888
+}
+
+button > img {
+  height: 30px;
+}
+
+.card-info {
+    z-index: 2;
+    display: flex;
+    width: 110px;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+.breweries-and-roadtrip {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.card-info > p {
+  font-size: 12px;
+  width: 110px;
+
+}
+
+.marker-button {
+  position: relative;
+  margin-left: 20px;
+}
+
+h5 > a, a:visited {
+  text-decoration: none;
+  color: black;
 }
