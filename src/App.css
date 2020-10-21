@@ -1,13 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Roboto+Slab:wght@500&family=Rye&family=Special+Elite&family=Syncopate:wght@400;700&display=swap");
+/* CSS rules to specify families
+
+font-family: 'Allerta Stencil', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Rye', cursive;
+font-family: 'Syncopate', sans-serif; */
+
 header {
   height: 125px;
   display: flex;
+  font-family: 'Special Elite', cursive;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #23C9FF;
   color: black;
   margin-bottom: 70px;
-  width: 100vwu;
+  width: 100vw;
+}
+
+.loading {
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    z-index: -1;
 }
 
 .slogan {
@@ -84,19 +100,6 @@ button > img {
   background-color: white;
 }
 
-/* .card-info {
-    z-index: 2;
-    display: flex;
-    width: 110px;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    margin-top: 30px;
-    margin-right: 40px;
-} */
-
-
-
 .card-info {
   z-index: 2;
   display: flex;
@@ -129,6 +132,7 @@ button > img {
   justify-content: center;
   align-items: center;
   width: 40px;
+  height: 35px;
   margin: 0px;
   padding:0px;
   color: white;
@@ -136,10 +140,15 @@ button > img {
   border-radius: 5px;
 }
 
+button > img { 
+  width:80%; 
+  height:80%; 
+  overflow:hidden;
+} 
+
 .card-info > h5 {
   text-align: center;
 }
-
 
 h5 > a, a:visited {
   text-decoration: none;

@@ -69,7 +69,7 @@ const USMap = ({setSelectedState, coordinates, toolTip, toolTipContent}) => {
                 height={90} 
                 width={70} 
                 projection="geoAlbers" 
-                projectionConfig={{ scale: 175 }}
+                projectionConfig={{ scale: 180 }}
             >
                 <Geographies geography={geoUrl}>
                     {({ geographies }) =>
@@ -90,15 +90,15 @@ const USMap = ({setSelectedState, coordinates, toolTip, toolTipContent}) => {
                             style={{
                                 default: {
                                 fill: "#104547",
-                                outline: "none"
+                                outline: "white"
                                 },
                                 hover: {
                                 fill: "#23C9FF",
-                                outline: "none"
+                                outline: "white"
                                 },
                                 pressed: {
                                 fill: "#FF9E0A",
-                                outline: "none"
+                                outline: "white"
                                 }
                             }}
                         /> 

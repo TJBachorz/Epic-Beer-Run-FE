@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 import AlaskaMap from './AlaskaMap'
 import HawaiiMap from './HawaiiMap'
@@ -10,6 +10,13 @@ import ReactTooltip from "react-tooltip";
 export default function MapContainer({setSelectedState, coordinates}) {
 
     const [toolTipContent, setToolTipContent] = useState("")
+    
+    useEffect(() => {
+        setTimeout(() => { 
+            const loadingGif = document.querySelector(".loading")
+            loadingGif.remove()
+        }, 6000);
+    }, []);
 
     return (
         <div className="map-container">
@@ -21,18 +28,14 @@ export default function MapContainer({setSelectedState, coordinates}) {
                 toolTipContent={toolTipContent}
             />
             <ReactTooltip>{toolTipContent}</ReactTooltip>
-            {<USMap 
-                className="us-map" 
-                setSelectedState={setSelectedState}
-                coordinates={coordinates}
-                toolTip={setToolTipContent}
-            /> ? <USMap 
+            <img className="loading" src="./loading.gif" alt="loading"/>
+            <USMap 
                 className="us-map" 
                 setSelectedState={setSelectedState}
                 coordinates={coordinates}
                 toolTip={setToolTipContent}
                 toolTipContent={toolTipContent}
-                /> : <h1>Loading...</h1> }
+            />
             <ReactTooltip>{toolTipContent}</ReactTooltip>
             <NEMap 
                 className="ne-map" 

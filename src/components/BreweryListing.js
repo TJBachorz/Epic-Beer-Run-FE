@@ -28,7 +28,7 @@ export default function BreweryListing({breweries, selectedState, logCoordinates
 
     return (
         <div className="grid-container">
-            <h5 className="use-explanation">Select a state to see it's breweries</h5>
+            <h5 className="use-explanation">Select a state to see it's breweries:</h5>
             <h6 className="disclaimer"><em>***only breweries with available long/lat data are provided***</em></h6>
             <div className="breweries-and-roadtrip">
                 <div className="breweries-card-container">
