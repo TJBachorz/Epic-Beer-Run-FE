@@ -4,7 +4,8 @@ import {
     Marker,
     ComposableMap,
     Geographies,
-    Geography
+    Geography,
+    Line
 } from "react-simple-maps";
 
 const geoUrl = "./maps/usmap.json";
@@ -29,6 +30,26 @@ const USMap = ({setSelectedState, coordinates}) => {
                 </Marker>
                 )
         })
+    }
+
+    const setLines = () => {
+        let connectionLines = []
+        for (let i=0; i < coordinates.length; i++) {
+            if (coordinates[i+1]) {
+                let startPoint = coordinates[i]
+                let endPoint = coordinates[i+1]
+                connectionLines = [...connectionLines, 
+                    <Line
+                        from={startPoint}
+                        to={endPoint}
+                        stroke="#FF5533"
+                        strokeWidth={1}
+                        strokeLinecap="round"
+                    /> 
+                ]
+            }
+        }
+        return connectionLines
     }
 
     return (
@@ -75,6 +96,7 @@ const USMap = ({setSelectedState, coordinates}) => {
                     }
                 </Geographies>
                 {setMarkers()}
+                {setLines()}
             </ComposableMap>
         </div>
     );

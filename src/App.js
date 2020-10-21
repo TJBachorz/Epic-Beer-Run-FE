@@ -41,7 +41,7 @@ function App() {
     )
   }
 
-  const logCoordinates = ({longitude, latitude}) => {
+  const logCoordinates = ({longitude, latitude, name}) => {
     if (!findBreweryCoordinates(longitude, latitude)) {
       setCoordinates([...coordinates, [longitude, latitude]])
     } else {

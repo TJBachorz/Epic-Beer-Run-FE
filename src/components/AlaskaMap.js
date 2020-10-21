@@ -2,7 +2,6 @@ import React from 'react'
 
 import {
     Marker,
-    ZoomableGroup,
     ComposableMap,
     Geographies,
     Geography
@@ -11,11 +10,21 @@ import {
 const geoUrl = "./maps/alaska_and_hawaii.json";
 
 
-export default function AlaskaMap({setSelectedState}) {
+export default function AlaskaMap({setSelectedState, coordinates}) {
 
     const handleStateClick = (event) => {
         let clickedState = event.target.className.baseVal.split(" ")[1]
         setSelectedState(clickedState)
+    }
+
+    const setMarkers = () => {
+        return coordinates.map(coordinate => {
+            return (
+                <Marker coordinates={coordinate}>
+                    <circle r={1} fill="#E42" />
+                </Marker>
+                )
+        })
     }
 
     return (
@@ -35,13 +44,13 @@ export default function AlaskaMap({setSelectedState}) {
                         geography={geo}
                         className={geo.properties.abbrev}
                         onClick={handleStateClick}
-                        // onMouseEnter={() => {
-                        //     // const { NAME_1} = geo.properties;
-                        //     // setTooltipContent(`${NAME_1}`);
-                        // }}
-                        // onMouseLeave={() => {
-                        //     setTooltipContent("");
-                        // }}
+                        onMouseEnter={() => {
+                            // const { NAME_1} = geo.properties;
+                            // setTooltipContent(`${NAME_1}`);
+                        }}
+                        onMouseLeave={() => {
+                            setTooltipContent("");
+                        }}
                         style={{
                             default: {
                             fill: "#104547",
@@ -60,6 +69,7 @@ export default function AlaskaMap({setSelectedState}) {
                     ))
                     }
                 </Geographies>
+                {setMarkers()}
             </ComposableMap>
         </div>
     )

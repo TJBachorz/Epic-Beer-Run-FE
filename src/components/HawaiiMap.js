@@ -1,8 +1,6 @@
 import React from 'react'
 
 import {
-    Marker,
-    ZoomableGroup,
     ComposableMap,
     Geographies,
     Geography
@@ -12,10 +10,12 @@ const geoUrl = "./maps/alaska_and_hawaii.json";
 
 export default function HawaiiMap({setSelectedState}) {
 
+
     const handleStateClick = (event) => {
         let clickedState = event.target.className.baseVal.split(" ")[1]
         setSelectedState(clickedState)
     }
+    
     return (
         <div>
             <ComposableMap 
@@ -34,8 +34,8 @@ export default function HawaiiMap({setSelectedState}) {
                         className={geo.properties.abbrev}
                         onClick={handleStateClick}
                         // onMouseEnter={() => {
-                        //     // const { NAME_1} = geo.properties;
-                        //     // setTooltipContent(`${NAME_1}`);
+                        //     const {NAME_1} = geo.properties;
+                        //     setTooltipContent(`${NAME_1}`);
                         // }}
                         // onMouseLeave={() => {
                         //     setTooltipContent("");
