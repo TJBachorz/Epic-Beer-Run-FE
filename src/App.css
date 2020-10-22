@@ -19,6 +19,19 @@ header {
   width: 100vw;
 }
 
+.top-button {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  left: 95%;
+  top: 90%;
+  background-color: red;
+  font-size: 300;
+  z-index: 3;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
 .loading {
     position: absolute;
     left: 20%;

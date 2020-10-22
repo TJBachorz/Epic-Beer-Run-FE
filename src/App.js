@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
 
-  const baseURL = "http://localhost:3000/breweries"
+  const baseURL = "https://epic-beer-run.herokuapp.com"
   const [selectedState, setSelectedState] = useState("")
   const [breweryDB, setBreweryDB] = useState([])
   const [coordinates, setCoordinates] = useState([])
@@ -18,7 +18,7 @@ function App() {
   }, [])
 
   const fetchDataAndSetState = async () => {
-    await fetch(baseURL)
+    await fetch(`${baseURL}/breweries`)
       .then(response => response.json())
       .then(data => setBreweryDB(data))
   }
@@ -49,6 +49,11 @@ function App() {
     }
   }
 
+  const handleClick = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   return (
     <div className="App">
       <Header/>
@@ -62,6 +67,7 @@ function App() {
         logCoordinates={logCoordinates}
         coordinates={coordinates}
       />
+      <button className="top-button" onClick={handleClick}>TOP</button>
     </div>
   );
 }
