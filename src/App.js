@@ -67,6 +67,7 @@ function App() {
         selectedState={selectedState}
         logCoordinates={logCoordinates}
         coordinates={coordinates}
+        setCoordinates={setCoordinates}
       />
       <button className="top-button" onClick={handleClick}>
         TOP

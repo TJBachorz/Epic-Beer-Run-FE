@@ -4,18 +4,28 @@ import DestinationCardContainer from './DestinationCardContainer'
 
 import { DragDropContext } from 'react-beautiful-dnd';
 
-export default function RoadTrip({coordinates}) {
+export default function RoadTrip({coordinates, setCoordinates}) {
 
-    const updateState = () => {
-        console.log("updated state")
+    const updateCoordinates = (result) => {
+        const { destination, source, draggableId } = result;
+
+        if (!destination) {
+            return;
+        }
+        if (
+            destination.droppableId === source.droppableId && 
+            destination.index === source.index
+        ) {
+            return;
+        }
     }
 
     return (
         <div className="roadtrip">
-            <DragDropContext onDragEnd={updateState}>
+            <DragDropContext onDragEnd={updateCoordinates}>
                 <h1>Your Road Trip:</h1>
                 <DestinationCardContainer 
-                    id={1}
+                    id={"1"}
                     coordinates={coordinates}
                 />
             </DragDropContext>

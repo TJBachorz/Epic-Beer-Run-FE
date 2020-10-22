@@ -3,7 +3,15 @@ import React from 'react'
 import BreweryCard from './BreweryCard'
 import RoadTrip from './RoadTrip'
 
-export default function BreweryListing({breweries, selectedState, logCoordinates, coordinates}) {
+export default function BreweryListing(props) {
+
+    const {
+        breweries, 
+        selectedState, 
+        logCoordinates, 
+        coordinates, 
+        setCoordinates
+    } = props
 
     const filterBreweriesBySelectedState = () => {
         return breweries.filter(brewery => {
@@ -34,7 +42,11 @@ export default function BreweryListing({breweries, selectedState, logCoordinates
                 <div className="breweries-card-container">
                     {cardMap()}
                 </div>
-                {coordinates.length !== 0 ? <RoadTrip coordinates={coordinates}/> : null}
+                {coordinates.length !== 0 ? 
+                    <RoadTrip 
+                        setCoordinates={setCoordinates} 
+                        coordinates={coordinates}
+                    /> : null}
             </div>
         </div>
     )

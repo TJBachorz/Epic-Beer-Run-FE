@@ -27,7 +27,7 @@ export default function NEMap({setSelectedState, coordinates, toolTip}) {
                 <Marker 
                     coordinates={coordinate}
                     onMouseEnter={() => {
-                        toolTip(`${coordinate[2]}`);
+                        toolTip(`${coordinate[2].name}`);
                     }}
                     onMouseLeave={() => {
                         toolTip("");

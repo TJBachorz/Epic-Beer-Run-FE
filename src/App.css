@@ -181,15 +181,6 @@ h5 > a, a:visited {
   font-family: 'Roboto Slab', serif;
   display: flex;
   flex-direction: row;
-  
-}
-
-.destination-card {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
 }
 
 .destination-name, .destination-location {
