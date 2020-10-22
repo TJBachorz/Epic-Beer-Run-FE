@@ -8,14 +8,23 @@ const DestinationInfo = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 200px;
+    height: 150px;
     border: 1px solid black;
-    margin: 5px;
+    background-color: white;
 `;
 
 export default function DestinationCard({coordinate, index}) {
+    const idToString = () => {
+        if (typeof coordinate[2].id === String && coordinate[2].id !== undefined) {
+            return coordinate[2].id
+        } else {
+            return coordinate[2].id.toString()
+        }
+    }
 
     return (
-        <Draggable key={coordinate[2].id} draggableId={coordinate[2].id.toString()} index={index}>
+        <Draggable key={coordinate[2].id} draggableId={idToString()} index={index}>
             {provided => (
                 <DestinationInfo 
                     {...provided.draggableProps}

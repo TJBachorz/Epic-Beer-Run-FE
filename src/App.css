@@ -183,6 +183,18 @@ h5 > a, a:visited {
   flex-direction: row;
 }
 
+.road-trip-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.road-trip-header > img {
+  height: 50px;
+}
+
 .destination-name, .destination-location {
   margin:5px;
+  text-align: center  ;
 }
