@@ -4,18 +4,28 @@ import { Droppable } from 'react-beautiful-dnd';
 
 import DestinationCard from './DestinationCard'
 
-export default function DestinationCardContainer({coordinates}) {
+export default function DestinationCardContainer({coordinates, id}) {
 
-    const renderDestinationCards = () => {
-        return coordinates.map(coordinate => {
-            return <DestinationCard coordinate={coordinate}/>
-        })
-    }
     return (
-        <div>
-            {/* <Droppable droppableId={}>
-                {renderDestinationCards()}
-            </Droppable> */}
-        </div>
+        <Droppable droppableId={id}>
+            {provided => (
+                <ul
+                    innerRef={provided.innerRef}
+                    {...provided.droppableProps}
+                    className="destination-card-container"
+                >
+                    {coordinates.map((coordinate, index) => {
+                        return (
+                            <DestinationCard 
+                                key={coordinate[2].id} 
+                                coordinate={coordinate}
+                                index={index}
+                            />
+                        )
+                    })} 
+                    {provided.placeholder}       
+                </ul>
+            )}
+        </Droppable>
     )
 }

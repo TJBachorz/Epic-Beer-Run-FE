@@ -12,9 +12,12 @@ export default function RoadTrip({coordinates}) {
 
     return (
         <div className="roadtrip">
-            <h1>Your Road Trip:</h1>
             <DragDropContext onDragEnd={updateState}>
-                <DestinationCardContainer coordinates={coordinates}/>
+                <h1>Your Road Trip:</h1>
+                <DestinationCardContainer 
+                    id={1}
+                    coordinates={coordinates}
+                />
             </DragDropContext>
         </div>
     )

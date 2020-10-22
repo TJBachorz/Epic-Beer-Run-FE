@@ -1,11 +1,22 @@
 import React from 'react'
 
-export default function DestinationCard({coordinate}) {
+import { Draggable } from 'react-beautiful-dnd';
+
+export default function DestinationCard({coordinate, index}) {
 
     return (
-        <div className="destination-card">
-            <h5 className="destination-name">{coordinate[2].name}</h5>
-            <p className="destination-location">{`${coordinate[2].city}, ${coordinate[2].state}`}</p>
-        </div>
+        <Draggable draggableId={coordinate[2].id} index={index}>
+            {provided => (
+                <li 
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                    innerRef={provided.innerRef}
+                    className="destination-card"
+                >
+                    <h5 className="destination-name">{coordinate[2].name}</h5>
+                    <p className="destination-location">{`${coordinate[2].city}, ${coordinate[2].state}`}</p>
+                </li>
+            )}
+        </Draggable>
     )
 }
