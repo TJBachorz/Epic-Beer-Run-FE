@@ -41,9 +41,10 @@ function App() {
     )
   }
 
-  const logCoordinates = ({longitude, latitude, name}) => {
+  const logCoordinates = (brewery) => {
+    const { longitude, latitude } = brewery
     if (!findBreweryCoordinates(longitude, latitude)) {
-      setCoordinates([...coordinates, [longitude, latitude, name]])
+      setCoordinates([...coordinates, [longitude, latitude, brewery]])
     } else {
       setCoordinates(filterOutCoordinates(longitude, latitude))
     }
@@ -67,7 +68,9 @@ function App() {
         logCoordinates={logCoordinates}
         coordinates={coordinates}
       />
-      <button className="top-button" onClick={handleClick}>TOP</button>
+      <button className="top-button" onClick={handleClick}>
+        TOP
+      </button>
     </div>
   );
 }

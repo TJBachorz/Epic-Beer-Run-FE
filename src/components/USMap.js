@@ -30,7 +30,7 @@ const USMap = ({setSelectedState, coordinates, toolTip, toolTipContent}) => {
                 <Marker 
                     coordinates={coordinate}
                     onMouseEnter={() => {
-                        toolTip(`${coordinate[2]}`);
+                        toolTip(`${coordinate[2].name}`);
                     }}
                     onMouseLeave={() => {
                         toolTip("");
@@ -75,34 +75,38 @@ const USMap = ({setSelectedState, coordinates, toolTip, toolTipContent}) => {
                     {({ geographies }) =>
                     geographies.map(geo => ( 
                         <>
-                        <Geography
-                            key={geo.rsmKey}
-                            geography={geo}
-                            className={geo.properties.NAME_1.split(" ").join("-")}
-                            onClick={handleStateClick}
-                            onMouseEnter={() => {
-                                const { NAME_1} = geo.properties;
-                                toolTip(`${NAME_1}`);
-                            }}
-                            onMouseLeave={() => {
-                                toolTip("");
-                            }}
-                            style={{
-                                default: {
-                                fill: "#104547",
-                                outline: "white"
-                                },
-                                hover: {
-                                fill: "#23C9FF",
-                                outline: "white"
-                                },
-                                pressed: {
-                                fill: "#FF9E0A",
-                                outline: "white"
+                            <Geography
+                                key={geo.rsmKey}
+                                geography={geo}
+                                className={
+                                    geo.properties.NAME_1
+                                    .split(" ")
+                                    .join("-")
                                 }
-                            }}
-                        /> 
-                        <ReactTooltip>{toolTipContent}</ReactTooltip>
+                                onClick={handleStateClick}
+                                onMouseEnter={() => {
+                                    const { NAME_1} = geo.properties;
+                                    toolTip(`${NAME_1}`);
+                                }}
+                                onMouseLeave={() => {
+                                    toolTip("");
+                                }}
+                                style={{
+                                    default: {
+                                    fill: "#104547",
+                                    outline: "white"
+                                    },
+                                    hover: {
+                                    fill: "#23C9FF",
+                                    outline: "white"
+                                    },
+                                    pressed: {
+                                    fill: "#FF9E0A",
+                                    outline: "white"
+                                    }
+                                }}
+                            /> 
+                            <ReactTooltip>{toolTipContent}</ReactTooltip>
                         </>
                     ))
                     }

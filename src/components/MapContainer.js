@@ -24,8 +24,6 @@ export default function MapContainer({setSelectedState, coordinates}) {
                 className="alaska" 
                 setSelectedState={setSelectedState}
                 coordinates={coordinates}
-                toolTip={setToolTipContent}
-                toolTipContent={toolTipContent}
             />
             <ReactTooltip>{toolTipContent}</ReactTooltip>
             <img className="loading" src="./loading.gif" alt="loading"/>
@@ -42,14 +40,10 @@ export default function MapContainer({setSelectedState, coordinates}) {
                 setSelectedState={setSelectedState}
                 coordinates={coordinates}
                 toolTip={setToolTipContent}
-                toolTipContent={toolTipContent}
             />
-            <ReactTooltip>{toolTipContent}</ReactTooltip>
             <HawaiiMap 
                 className="hawaii-map" 
                 setSelectedState={setSelectedState}
-                coordinates={coordinates}
-                toolTipContent={toolTipContent}
             />
         </div>
     )

@@ -29,31 +29,24 @@ export default function HawaiiMap({setSelectedState}) {
                     {({ geographies }) =>
                     geographies.map(geo => ( 
                         <Geography
-                        key={geo.rsmKey}
-                        geography={geo}
-                        className={geo.properties.abbrev}
-                        onClick={handleStateClick}
-                        // onMouseEnter={() => {
-                        //     const {NAME_1} = geo.properties;
-                        //     setTooltipContent(`${NAME_1}`);
-                        // }}
-                        // onMouseLeave={() => {
-                        //     setTooltipContent("");
-                        // }}
-                        style={{
-                            default: {
-                            fill: "#104547",
-                            outline: "none"
-                            },
-                            hover: {
-                            fill: "#23C9FF",
-                            outline: "none"
-                            },
-                            pressed: {
-                            fill: "#E42",
-                            outline: "none"
-                            }
-                        }}
+                            key={geo.rsmKey}
+                            geography={geo}
+                            className={geo.properties.abbrev}
+                            onClick={handleStateClick}
+                            style={{
+                                default: {
+                                fill: "#104547",
+                                outline: "none"
+                                },
+                                hover: {
+                                fill: "#23C9FF",
+                                outline: "none"
+                                },
+                                pressed: {
+                                fill: "#E42",
+                                outline: "none"
+                                }
+                            }}
                         />
                     ))
                     }

@@ -10,7 +10,7 @@ import {
 const geoUrl = "./maps/alaska_and_hawaii.json";
 
 
-export default function AlaskaMap({setSelectedState, coordinates, toolTip}) {
+export default function AlaskaMap({setSelectedState, coordinates}) {
 
     const handleStateClick = (event) => {
         let clickedState = event.target.className.baseVal.split(" ")[1]
@@ -20,14 +20,7 @@ export default function AlaskaMap({setSelectedState, coordinates, toolTip}) {
     const setMarkers = () => {
         return coordinates.map(coordinate => {
             return (
-                <Marker 
-                    coordinates={coordinate}
-                    onMouseEnter={() => {
-                        toolTip(`${coordinate[2]}`);
-                    }}
-                    onMouseLeave={() => {
-                        toolTip("");
-                    }}>
+                <Marker coordinates={coordinate}>
                     <circle r={1} fill="#E42"/>    
                 </Marker>
             )
@@ -47,31 +40,24 @@ export default function AlaskaMap({setSelectedState, coordinates, toolTip}) {
                     {({ geographies }) =>
                     geographies.map(geo => ( 
                         <Geography
-                        key={geo.rsmKey}
-                        geography={geo}
-                        className={geo.properties.abbrev}
-                        onClick={handleStateClick}
-                        // onMouseEnter={() => {
-                            // const { NAME_1} = geo.properties;
-                            // setTooltipContent(`${NAME_1}`);
-                        // }}
-                        // onMouseLeave={() => {
-                        //     setTooltipContent("");
-                        // }}
-                        style={{
-                            default: {
-                            fill: "#104547",
-                            outline: "none"
-                            },
-                            hover: {
-                            fill: "#23C9FF",
-                            outline: "none"
-                            },
-                            pressed: {
-                            fill: "#E42",
-                            outline: "none"
-                            }
-                        }}
+                            key={geo.rsmKey}
+                            geography={geo}
+                            className={geo.properties.abbrev}
+                            onClick={handleStateClick}
+                            style={{
+                                default: {
+                                fill: "#104547",
+                                outline: "none"
+                                },
+                                hover: {
+                                fill: "#23C9FF",
+                                outline: "none"
+                                },
+                                pressed: {
+                                fill: "#E42",
+                                outline: "none"
+                                }
+                            }}
                         />
                     ))
                     }

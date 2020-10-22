@@ -15,8 +15,6 @@ export default function BreweryCard({brewery, logCoordinates}) {
                 </button>
                 <p>{`${brewery.city}, ${brewery.state}`}</p>
             </div>
-            <div>
-            </div>
         </section>
     )
 }

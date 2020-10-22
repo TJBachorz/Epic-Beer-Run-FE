@@ -3,13 +3,13 @@
 
 font-family: 'Allerta Stencil', sans-serif;
 font-family: 'Roboto Slab', serif;
-font-family: 'Rye', cursive;
-font-family: 'Syncopate', sans-serif; */
+font-family: 'Syncopate', sans-serif;
+font-family: 'Special Elite', cursive; */
 
 header {
-  height: 125px;
+  height: 130px;
+  font-family: 'Rye', cursive;
   display: flex;
-  font-family: 'Special Elite', cursive;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -17,6 +17,12 @@ header {
   color: black;
   margin-bottom: 70px;
   width: 100vw;
+}
+
+header > h1 {
+    font-size: 75px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .top-button {
@@ -40,6 +46,7 @@ header {
 }
 
 .slogan {
+  margin-top: 0px;
   font-size: 12px;
 }
 
@@ -123,6 +130,8 @@ button > img {
   margin-top: 52px;
   margin-right: 141px;
   margin-bottom: 5px;
+  font-family: 'Special Elite', cursive; 
+
 }
 
 .breweries-and-roadtrip {
@@ -166,4 +175,23 @@ button > img {
 h5 > a, a:visited {
   text-decoration: none;
   color: black;
+}
+
+.roadtrip {
+  font-family: 'Roboto Slab', serif;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.destination-card {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.destination-name, .destination-location {
+  margin:5px;
 }
