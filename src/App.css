@@ -221,11 +221,14 @@ h5 > a, a:visited {
 .marker-info {
   display: flex;
   flex-direction: column;
+  width: 200px;
   justify-content: center;
   align-items: center;
 }
 
 .destination-name, .destination-location {
+  white-space: normal;
+  font-family: 'Special Elite', cursive; 
   margin:5px;
   text-align: center;
   overflow-wrap: break-word;
