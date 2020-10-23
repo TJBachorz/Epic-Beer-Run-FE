@@ -11,7 +11,8 @@
     "react-dom": "^16.14.0",
     "react-scripts": "^3.4.4",
     "react-simple-maps": "^2.1.2",
-    "react-tooltip": "^4.2.10"
+    "react-tooltip": "^4.2.10",
+    "styled-components": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

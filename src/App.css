@@ -40,7 +40,7 @@ header > h1 {
 
 .loading {
     position: absolute;
-    left: 20%;
+    left: 18%;
     top: 10%;
     z-index: -1;
 }
@@ -93,6 +93,8 @@ svg.rsm-svg.us-map {
   grid-auto-rows: 190px;
   grid-row-gap: 1em;
   grid-column-gap: 1em;
+  border-top: 2px solid gray;
+  padding-top: 20px;
 }
 
 .grid-container {
@@ -131,7 +133,6 @@ button > img {
   margin-right: 141px;
   margin-bottom: 5px;
   font-family: 'Special Elite', cursive; 
-
 }
 
 .breweries-and-roadtrip {
@@ -181,17 +182,52 @@ h5 > a, a:visited {
   font-family: 'Roboto Slab', serif;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 3s;
+  animation-name: slidein;
+  overflow: hidden;
+}
   
+@keyframes slidein {
+  from {
+    margin-right: 100%;
+    width: 100%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
-.destination-card {
-  display:flex;
+
+.road-trip-header {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+}
+
+.road-trip-header > h1 {
+  margin-bottom:0px;  
+}
+
+.road-trip-header > img {
+  height: 100px;
+}
+
+.marker-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .destination-name, .destination-location {
   margin:5px;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }

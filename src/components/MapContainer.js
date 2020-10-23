@@ -39,7 +39,6 @@ export default function MapContainer({setSelectedState, coordinates}) {
                 className="ne-map" 
                 setSelectedState={setSelectedState}
                 coordinates={coordinates}
-                toolTip={setToolTipContent}
             />
             <HawaiiMap 
                 className="hawaii-map" 

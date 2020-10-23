@@ -9,7 +9,7 @@ import {
 
 const geoUrl = './maps/nemap.json'
 
-export default function NEMap({setSelectedState, coordinates, toolTip}) {
+export default function NEMap({setSelectedState, coordinates}) {
 
     const handleStateClick = (event) => {
         let clickedState = (
@@ -26,12 +26,7 @@ export default function NEMap({setSelectedState, coordinates, toolTip}) {
             return (
                 <Marker 
                     coordinates={coordinate}
-                    onMouseEnter={() => {
-                        toolTip(`${coordinate[2]}`);
-                    }}
-                    onMouseLeave={() => {
-                        toolTip("");
-                    }}>
+                >
                     <circle r={1} fill="#E42"/>    
                 </Marker>
             )
