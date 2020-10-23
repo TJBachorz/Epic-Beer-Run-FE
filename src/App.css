@@ -43,7 +43,7 @@ footer {
 
 footer > h3 > a, footer > h3 > a:visited {
   color: wheat;
-  text-shadow: 2px 2px #104547;
+  text-shadow: 2px 1px 4px black;
   font-size: 24px;
   font-family: 'Roboto Slab', serif;
 }
@@ -54,11 +54,6 @@ header > h1 {
   margin: 0px;
   color: wheat;
   text-shadow: 6px 6px #104547;
-}
-
-header > p {
-  color: wheat;
-  text-shadow: 1px 1px black;
 }
 
 .top-button {
@@ -89,7 +84,9 @@ button.top-letter {
 
 .slogan {
   margin-top: 0px;
-  font-size: 12px;
+  font-size: 14px;
+  color: wheat;
+  text-shadow: 2px 2px 1px #104543;
 }
 
 .disclaimer {
@@ -257,9 +254,8 @@ h5 > a, a:visited {
   font-family: 'Special Elite', cursive; 
   margin:5px;
   text-align: center;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
+  font-weight: 600;
+  text-shadow: 0 0 4px white
 }
 
 a, a:visited {

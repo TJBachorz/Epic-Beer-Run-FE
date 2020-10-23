@@ -54,7 +54,7 @@ export default function AlaskaMap({setSelectedState, coordinates}) {
                                 outline: "none"
                                 },
                                 pressed: {
-                                fill: "red",
+                                fill: "#f3bd6a",
                                 outline: "none"
                                 }
                             }}

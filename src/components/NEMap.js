@@ -63,7 +63,7 @@ export default function NEMap({setSelectedState, coordinates}) {
                                 outline: "none"
                                 },
                                 pressed: {
-                                fill: "red",
+                                fill: "#f3bd6a",
                                 outline: "none"
                                 }
                             }}

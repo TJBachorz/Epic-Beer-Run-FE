@@ -101,7 +101,7 @@ const USMap = ({setSelectedState, coordinates, toolTip, toolTipContent}) => {
                                     outline: "none"
                                     },
                                     pressed: {
-                                    fill: "red",
+                                    fill: "#f3bd6a",
                                     outline: "none"
                                     }
                                 }}
