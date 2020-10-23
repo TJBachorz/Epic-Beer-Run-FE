@@ -5,15 +5,20 @@ font-family: 'Allerta Stencil', sans-serif;
 font-family: 'Roboto Slab', serif;
 font-family: 'Syncopate', sans-serif;
 font-family: 'Special Elite', cursive; */
+/* background-image: url("https://www.bottleneckmgmt.com/wp-content/uploads/2016/02/900x600-Types-of-Beer-Glasses.png"); */
 
 header {
+  background-image: url("https://cdn.grmag.com/wp-content/uploads/sites/113/2019/02/Beer-Month-GR-beer-glasses-bar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  background-color: white;
   height: 130px;
   font-family: 'Rye', cursive;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #23C9FF;
   color: black;
   margin-bottom: 70px;
   width: 100vw;
@@ -21,36 +26,57 @@ header {
 }
 
 footer {
+  background-image: url("https://www.yorkmix.com/wp-content/uploads/2018/09/empty-pint-glasses-fl.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
   height: 90px;
-  font-family: 'Roboto Slab', serif;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #23C9FF;
-  color: black;
+  background-color:white;
   margin-top: 70px;
   width: 100vw;
   border-top: 2px solid #104547;
 }
 
+footer > h3 > a, footer > h3 > a:visited {
+  color: wheat;
+  text-shadow: 2px 2px #104547;
+  font-size: 24px;
+  font-family: 'Roboto Slab', serif;
+}
+
 header > h1 {
-    font-size: 75px;
-    padding: 0px;
-    margin: 0px;
+  font-size: 75px;
+  padding: 0px;
+  margin: 0px;
+  color: wheat;
+  text-shadow: 6px 6px #104547;
+}
+
+header > p {
+  color: wheat;
+  text-shadow: 1px 1px black;
 }
 
 .top-button {
   position: fixed;
-  height: 50px;
+  color: wheat;
+  height: 75px;
   width: 50px;
-  left: 95%;
-  top: 90%;
-  background-color: red;
+  left: 96.8%;
+  top: 60%;
+  background-color: #104547;
   font-size: 300;
   z-index: 3;
-  border-radius: 50%;
+  border-radius: 15px;
   border: 1px solid black;
+}
+
+button.top-letter {
+  font-family: 'Roboto Slab', serif;
 }
 
 .loading {

@@ -71,7 +71,10 @@ function App() {
         setCoordinates={setCoordinates}
       />
       <button className="top-button" onClick={handleClick}>
-        TOP
+        <div className="top-letter"><strong>^</strong></div>
+        <div className="top-letter"><strong>T</strong></div>
+        <div className="top-letter"><strong>O</strong></div>
+        <div className="top-letter"><strong>P</strong></div>
       </button>
       <Footer/>
     </div>

@@ -59,11 +59,11 @@ export default function NEMap({setSelectedState, coordinates}) {
                                 outline: "none"
                                 },
                                 hover: {
-                                fill: "#23C9FF",
+                                fill: "#FF9E0A",
                                 outline: "none"
                                 },
                                 pressed: {
-                                fill: "#E42",
+                                fill: "red",
                                 outline: "none"
                                 }
                             }}

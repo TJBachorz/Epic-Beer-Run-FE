@@ -94,15 +94,15 @@ const USMap = ({setSelectedState, coordinates, toolTip, toolTipContent}) => {
                                 style={{
                                     default: {
                                     fill: "#104547",
-                                    outline: "white"
+                                    outline: "none"
                                     },
                                     hover: {
-                                    fill: "#23C9FF",
-                                    outline: "white"
+                                    fill: "#FF9E0A",
+                                    outline: "none"
                                     },
                                     pressed: {
-                                    fill: "#FF9E0A",
-                                    outline: "white"
+                                    fill: "red",
+                                    outline: "none"
                                     }
                                 }}
                             /> 
