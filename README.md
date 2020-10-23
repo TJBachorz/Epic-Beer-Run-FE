@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# [Epic Beer Run](https://epic-beer-run.web.app/)
 
-## Available Scripts
+>Your guide for the next great brewery roadtrip
 
-In the project directory, you can run:
+## Table of Contents
+* [Video Demo](#intro-video)
+* [About](#about)
+* [Features](#features)
+* [Technologies](#technologies)
+* [Contact](#contact)
 
-### `npm start`
+## Intro Video
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Take a peek at Epic Beer Run!](https://www.loom.com/share/b6fc55760ca9464a8a4d99d714bfb18e)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## About 
 
-### `npm test`
+Nothing's more American than a cross-country road trip...except a cross-country road trip in search of the best breweries from across the country.  And now, with Epic Beer Run it's easier than ever to research breweries, map out your route, and settle on your itinerary for your next great brew-hopping road trip.  
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+* Select a state from the map and browse through a list of breweries.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    <img src="https://media.giphy.com/media/xdlQcTOqbTpq53xy8c/giphy.gif" width="600" height ="400" />
+    
+* Click on a brewery to browse it's website in a new tab.
+* Click the marker icon to add the brewery to the map.
+* Drag and Drop your marked breweries to change the plot of your road trip.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+NOTE: Plotting for supplemental and non-contiguous states currently unavailable.  Desktop Browsing is recommended.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies
 
-### `npm run eject`
+* Ruby on Rails
+* Postgresql
+* Javascript
+* HTML/CSS
+* React
+* React-beautiful-dnd
+* React-simple-maps
+* React-tooltip
+* Heroku
+* Firebase
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contact 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Author : TJ Bachorz
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[Github](https://github.com/TJBachorz)
+[Linkedin](https://www.linkedin.com/in/tjbachorz/)
+[Email](tjbachorz@gmail.com)
