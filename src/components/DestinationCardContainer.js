@@ -9,11 +9,11 @@ const DestinationList = styled.div`
     border: 4px solid gainsboro;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
+    white-space: nowrap;
     width: 70%;
-    overflow: auto;
     margin: 20px;
     border-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-    padding: 20px;
 `;
 
 export default function DestinationCardContainer({coordinates}) {
