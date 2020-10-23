@@ -21,7 +21,7 @@ Nothing's more American than a cross-country road trip...except a cross-country 
 
 * Select a state from the map and browse through a list of breweries.
 
-    <img src="https://media.giphy.com/media/xdlQcTOqbTpq53xy8c/giphy.gif" width="1035" height ="649" />
+    <img src="https://media.giphy.com/media/xdlQcTOqbTpq53xy8c/giphy.gif" width="600" height ="400" />
     
 * Click on a brewery to browse it's website in a new tab.
 * Click the marker icon to add the brewery to the map.
