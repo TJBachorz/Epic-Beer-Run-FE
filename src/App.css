@@ -1,11 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Roboto+Slab:wght@500&family=Rye&family=Special+Elite&family=Syncopate:wght@400;700&display=swap");
-/* CSS rules to specify families
-
-font-family: 'Allerta Stencil', sans-serif;
-font-family: 'Roboto Slab', serif;
-font-family: 'Syncopate', sans-serif;
-font-family: 'Special Elite', cursive; */
-/* background-image: url("https://www.bottleneckmgmt.com/wp-content/uploads/2016/02/900x600-Types-of-Beer-Glasses.png"); */
 
 header {
   background-image: url("https://cdn.grmag.com/wp-content/uploads/sites/113/2019/02/Beer-Month-GR-beer-glasses-bar.png");
@@ -131,7 +124,7 @@ svg.rsm-svg.us-map {
   grid-template-columns: repeat(4, 300px);
   grid-auto-rows: 190px;
   grid-row-gap: 1em;
-  grid-column-gap: 1em;
+  grid-column-gap: 2em;
   border-top: 2px solid gray;
   padding-top: 20px;
 }
