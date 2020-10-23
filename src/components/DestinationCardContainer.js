@@ -9,7 +9,7 @@ const DestinationList = styled.div`
     border: 4px solid gainsboro;
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    overflow: auto;
     white-space: nowrap;
     width: 70%;
     margin: 20px;

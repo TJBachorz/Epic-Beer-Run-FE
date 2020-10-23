@@ -3,7 +3,7 @@ import React from 'react';
 import DestinationCardContainer from './DestinationCardContainer'
 
 import { DragDropContext } from 'react-beautiful-dnd';
-import octopusImage from '../octopus-beer.jpg'
+import octopusImage from '../octopus-beer.jpg';
 
 export default function RoadTrip({coordinates, setCoordinates}) {
 

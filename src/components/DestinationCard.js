@@ -8,11 +8,16 @@ const DestinationInfo = styled.div`
     justify-content:center;
     align-items:center;
     width: 200px;
-    height: 125px;
+    height: 100px;
     white-space: nowrap;
-    overflow: hidden;
+    overflow: auto;
     border: 2px solid black;
+    border-radius: 15px;
     background-color: white;
+    margin: 1px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
     text-align:center;
 `;
 

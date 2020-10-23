@@ -22,7 +22,7 @@ header {
 
 footer {
   height: 90px;
-  font-family: 'Rye', cursive;
+  font-family: 'Roboto Slab', serif;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -55,8 +55,9 @@ header > h1 {
 
 .loading {
     position: absolute;
-    left: 18%;
-    top: 10%;
+    height: 400px;
+    left: 30%;
+    top: 20%;
     z-index: -1;
 }
 
