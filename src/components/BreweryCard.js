@@ -9,7 +9,14 @@ export default function BreweryCard({brewery, logCoordinates}) {
     return (
         <section className={`card ${brewery.name}`}>
             <div className="card-info">
-                <h5><a href={brewery.website_url}>{brewery.name}</a></h5>
+                <h5>
+                    <a href={brewery.website_url}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        {brewery.name}
+                    </a>
+                </h5>
                 <button className="marker-button" onClick={handleClick}>
                     <img src="./maps/map-marker.webp" alt="map marker"/>
                 </button>

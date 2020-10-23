@@ -34,7 +34,14 @@ export default function DestinationCard({coordinate, index}) {
                     ref={provided.innerRef}
                 >
                     <div className="marker-info">
-                        <h5 className="destination-name"><a href={coordinate[2].website_url}>{coordinate[2].name}</a></h5>
+                        <h5 className="destination-name">
+                            <a href={coordinate[2].website_url}
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                            >
+                                {coordinate[2].name}
+                            </a>
+                        </h5>
                         <p className="destination-location">
                                 {`${coordinate[2].city}, ${coordinate[2].state}`}
                         </p>

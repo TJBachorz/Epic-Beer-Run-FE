@@ -17,6 +17,21 @@ header {
   color: black;
   margin-bottom: 70px;
   width: 100vw;
+  border-bottom: 2px solid #104547;
+}
+
+footer {
+  height: 90px;
+  font-family: 'Rye', cursive;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #23C9FF;
+  color: black;
+  margin-top: 70px;
+  width: 100vw;
+  border-top: 2px solid #104547;
 }
 
 header > h1 {
@@ -184,23 +199,8 @@ h5 > a, a:visited {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  animation-duration: 3s;
-  animation-name: slidein;
   overflow: hidden;
 }
-  
-@keyframes slidein {
-  from {
-    margin-right: 100%;
-    width: 100%; 
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
 
 .road-trip-header {
   display: flex;
@@ -230,4 +230,9 @@ h5 > a, a:visited {
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: black;
 }

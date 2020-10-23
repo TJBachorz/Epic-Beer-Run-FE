@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 
-import Header from './components/Header'
-import MapContainer from './components/MapContainer'
+import Header from './components/Header';
+import MapContainer from './components/MapContainer';
 import BreweryListing from './components/BreweryListing';
+import Footer from './components/Footer';
 
 import './App.css';
 
@@ -72,6 +73,7 @@ function App() {
       <button className="top-button" onClick={handleClick}>
         TOP
       </button>
+      <Footer/>
     </div>
   );
 }
