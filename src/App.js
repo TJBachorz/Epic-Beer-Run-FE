@@ -18,8 +18,8 @@ function App() {
     fetchDataAndSetState()
   }, [])
 
-  const fetchDataAndSetState = async () => {
-    await fetch(`${baseURL}/breweries`)
+  const fetchDataAndSetState = () => {
+    fetch(`${baseURL}/breweries`)
       .then(response => response.json())
       .then(data => setBreweryDB(data))
   }
