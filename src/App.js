@@ -19,6 +19,7 @@ function App() {
   }, [])
 
   const fetchDataAndSetState = () => {
+    document.title = "Epic Beer Run - Map Out Your Next Great Brewery Road Trip"
     fetch(`${baseURL}/breweries`)
       .then(response => response.json())
       .then(data => setBreweryDB(data))
