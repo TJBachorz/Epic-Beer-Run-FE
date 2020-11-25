@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import {
     Marker,
@@ -7,16 +7,16 @@ import {
     Geography
 } from "react-simple-maps";
 
-const geoUrl = './maps/nemap.json'
+const geoUrl = './maps/nemap.json';
 
-export default function NEMap({setSelectedState, coordinates}) {
+export default function NEMap({ setSelectedState, coordinates }) {
 
     const handleStateClick = (event) => {
         let clickedState = (
             event.target.className.baseVal
-            .split(" ")[1]
-            .split("-")
-            .join(" ")
+                .split(" ")[1]
+                .split("-")
+                .join(" ")
         )
         setSelectedState(clickedState)
     }
@@ -24,9 +24,7 @@ export default function NEMap({setSelectedState, coordinates}) {
     const setMarkers = () => {
         return coordinates.map(coordinate => {
             return (
-                <Marker 
-                    coordinates={coordinate}
-                >
+                <Marker coordinates={coordinate}>
                     <circle r={1} fill="#E42"/>    
                 </Marker>
             )

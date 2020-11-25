@@ -1,14 +1,16 @@
 import React from 'react';
 
-import DestinationCardContainer from './DestinationCardContainer'
+import DestinationCardContainer from './DestinationCardContainer';
 
 import { DragDropContext } from 'react-beautiful-dnd';
 import octopusImage from '../octopus-beer.jpg';
 
-export default function RoadTrip({coordinates, setCoordinates}) {
+export default function RoadTrip({ coordinates, setCoordinates }) {
 
     const findCoordinatesByID = (draggableId) => {
-        return coordinates.find(coordinate => coordinate[2].id === +draggableId)
+        return coordinates.find(
+            coordinate => coordinate[2].id === +draggableId
+        )
     }
 
     const updateCoordinates = (result) => {
@@ -25,7 +27,7 @@ export default function RoadTrip({coordinates, setCoordinates}) {
             return;
         }
         
-        const migratingCoordinates = findCoordinatesByID(draggableId)
+        const migratingCoordinates = findCoordinatesByID(draggableId);
         const newCoordinates = Array.from(coordinates);
         newCoordinates.splice(source.index, 1);
         newCoordinates.splice(destination.index, 0, migratingCoordinates);

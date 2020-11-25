@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
 
-import AlaskaMap from './AlaskaMap'
-import HawaiiMap from './HawaiiMap'
-import USMap from './USMap'
-import NEMap from './NEMap'
+import AlaskaMap from './AlaskaMap';
+import HawaiiMap from './HawaiiMap';
+import USMap from './USMap';
+import NEMap from './NEMap';
 
 import ReactTooltip from "react-tooltip";
 
-export default function MapContainer({setSelectedState, coordinates}) {
+export default function MapContainer({ setSelectedState, coordinates }) {
 
     const [toolTipContent, setToolTipContent] = useState("")
     

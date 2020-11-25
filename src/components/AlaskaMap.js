@@ -9,7 +9,6 @@ import {
 
 const geoUrl = "./maps/alaska_and_hawaii.json";
 
-
 export default function AlaskaMap({setSelectedState, coordinates}) {
 
     const handleStateClick = (event) => {

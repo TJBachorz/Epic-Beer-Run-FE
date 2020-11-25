@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-export default function BreweryCard({brewery, logCoordinates}) {
+export default function BreweryCard({ brewery, logCoordinates }) {
 
     const handleClick = () => {
         logCoordinates(brewery)

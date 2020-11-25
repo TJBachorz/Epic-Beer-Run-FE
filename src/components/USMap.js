@@ -9,17 +9,16 @@ import {
 } from "react-simple-maps";
 import ReactTooltip from "react-tooltip";
 
-
 const geoUrl = "./maps/usmap.json";
 
-const USMap = ({setSelectedState, coordinates, toolTip, toolTipContent}) => {
+const USMap = ({ setSelectedState, coordinates, toolTip, toolTipContent }) => {
 
     const handleStateClick = (event) => {
         let clickedState = (
             event.target.className.baseVal
-            .split(" ")[1]
-            .split("-")
-            .join(" ")
+                .split(" ")[1]
+                .split("-")
+                .join(" ")
         )
         setSelectedState(clickedState)
     }

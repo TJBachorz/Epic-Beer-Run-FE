@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Header from './components/Header';
 import MapContainer from './components/MapContainer';
@@ -52,7 +52,7 @@ function App() {
     }
   }
 
-  const handleClick = () => {
+  const scrollToTop = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
@@ -71,7 +71,7 @@ function App() {
         coordinates={coordinates}
         setCoordinates={setCoordinates}
       />
-      <button className="top-button" onClick={handleClick}>
+      <button className="top-button" onClick={scrollToTop}>
         <div className="top-letter"><strong>^</strong></div>
         <div className="top-letter"><strong>T</strong></div>
         <div className="top-letter"><strong>O</strong></div>

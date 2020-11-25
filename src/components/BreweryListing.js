@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import BreweryCard from './BreweryCard'
-import RoadTrip from './RoadTrip'
+import BreweryCard from './BreweryCard';
+import RoadTrip from './RoadTrip';
 
 export default function BreweryListing(props) {
 
@@ -42,11 +42,14 @@ export default function BreweryListing(props) {
                 <div className="breweries-card-container">
                     {cardMap()}
                 </div>
-                {coordinates.length !== 0 ? 
+                {
+                coordinates.length !== 0 ? 
                     <RoadTrip 
                         setCoordinates={setCoordinates} 
                         coordinates={coordinates}
-                    /> : null}
+                    /> 
+                    : null
+                }
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import {
     ComposableMap,
@@ -8,7 +8,7 @@ import {
 
 const geoUrl = "./maps/alaska_and_hawaii.json";
 
-export default function HawaiiMap({setSelectedState}) {
+export default function HawaiiMap({ setSelectedState }) {
 
 
     const handleStateClick = (event) => {
