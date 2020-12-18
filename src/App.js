@@ -71,12 +71,7 @@ function App() {
         coordinates={coordinates}
         setCoordinates={setCoordinates}
       />
-      <button className="top-button" onClick={scrollToTop}>
-        <div className="top-letter"><strong>^</strong></div>
-        <div className="top-letter"><strong>T</strong></div>
-        <div className="top-letter"><strong>O</strong></div>
-        <div className="top-letter"><strong>P</strong></div>
-      </button>
+      <button className="top-button" onClick={scrollToTop}>^</button>
       <Footer/>
     </div>
   );
