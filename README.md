@@ -1,6 +1,6 @@
 # [Epic Beer Run](https://epic-beer-run.web.app/)
 
->The ultimate guide for your next great brewery roadtrip.
+>The ultimate guide for your next great brewery roadtrip!
 
 Check out the backend [here](https://github.com/TJBachorz/Epic-Beer-Run-BE)
 
