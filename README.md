@@ -1,6 +1,8 @@
 # [Epic Beer Run](https://epic-beer-run.web.app/)
 
->Your guide for the next great brewery roadtrip
+>The ultimate guide for your next great brewery roadtrip.
+
+Check out the backend [here](https://github.com/TJBachorz/Epic-Beer-Run-BE)
 
 ## Table of Contents
 * [Video Demo](#intro-video)
@@ -44,10 +46,4 @@ NOTE: Plotting for supplemental and non-contiguous states currently unavailable.
 
 ## Contact 
 
-Check out the backend [here](https://github.com/TJBachorz/Epic-Beer-Run-BE)
-
-Author : TJ Bachorz
-
-[Github](https://github.com/TJBachorz)
-[Linkedin](https://www.linkedin.com/in/tjbachorz/)
-[Email](tjbachorz@gmail.com)
+[<img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Github-512.png" width="40" height="40"/>](https://github.com/TJBachorz) &nbsp; [<img src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_14-linkedin-512.png" width="40" height="40"/>](https://www.linkedin.com/in/tjbachorz/) &nbsp; [<img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/medium-512.png" width="40" height="40"/>](https://tjbachorz.medium.com/)
