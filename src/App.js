@@ -9,7 +9,7 @@ import './App.css';
 
 function App() {
 
-  const baseURL = "https://epic-beer-run.herokuapp.com"
+  const baseURL = process.env.REACT_APP_BASE_URL
   const [selectedState, setSelectedState] = useState("")
   const [breweryDB, setBreweryDB] = useState([])
   const [coordinates, setCoordinates] = useState([])
