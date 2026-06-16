@@ -1,21 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Roboto+Slab:wght@500&family=Rye&family=Special+Elite&family=Syncopate:wght@400;700&display=swap");
 
 header {
-  background-image: url("https://cdn.grmag.com/wp-content/uploads/sites/113/2019/02/Beer-Month-GR-beer-glasses-bar.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
-  background-color: white;
+  background: linear-gradient(135deg, #0f1923 0%, #1e2d3d 100%);
+  background-repeat: unset;
+  background-size: unset;
+  background-position: unset;
   height: 140px;
-  font-family: 'Rye', cursive;
+  font-family: 'Syncopate', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #ffffff;
   margin-bottom: 70px;
   width: 100%;
-  border-bottom: 4px solid #104547;
+  border-bottom: 4px solid #f5a623;
 }
 
 footer {
@@ -42,11 +41,13 @@ footer > h3 > a, footer > h3 > a:visited {
 }
 
 header > h1 {
-  font-size: 75px;
-  padding: 0px;
-  margin: 0px;
-  color: wheat;
-  text-shadow: 6px 6px #104547;
+  font-size: 56px;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: none;
+  letter-spacing: 4px;
+  font-weight: 700;
 }
 
 .top-button {
@@ -76,10 +77,12 @@ header > h1 {
 }
 
 .slogan {
-  margin-top: 0px;
-  font-size: 14px;
-  color: wheat;
-  text-shadow: 2px 2px 1px #104543;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #f5a623;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: none;
 }
 
 .disclaimer {
