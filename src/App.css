@@ -52,18 +52,17 @@ header > h1 {
 .top-button {
   font-family: 'Roboto Slab', serif;
   position: fixed;
-  color: wheat;
+  color: #0f1923;
   height: 40px;
   width: 44px;
   line-height: 45px;
   left: 92.5%;
   top: 87.5%;
-  background-color: #104547;
-  font-size: 30px;
+  background-color: #f5a623;
   z-index: 3;
   border-radius: 2px;
   border: none;
-  outline:0;
+  outline: 0;
   font-size: 45px;
 }
 
@@ -123,10 +122,10 @@ svg.rsm-svg.us-map {
 .breweries-card-container {
   display: grid;
   grid-template-columns: repeat(4, 300px);
-  grid-auto-rows: 190px;
+  grid-auto-rows: auto;
   grid-row-gap: 1em;
   grid-column-gap: 2em;
-  border-top: 2px solid gray;
+  border-top: 2px solid #2a3d52;
   padding-top: 20px;
 }
 
@@ -208,7 +207,7 @@ button > img {
 
 h5 > a, a:visited {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
 }
 
 .roadtrip {
