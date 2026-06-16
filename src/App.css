@@ -2,9 +2,6 @@
 
 header {
   background: linear-gradient(135deg, #0f1923 0%, #1e2d3d 100%);
-  background-repeat: unset;
-  background-size: unset;
-  background-position: unset;
   height: 140px;
   font-family: 'Syncopate', sans-serif;
   display: flex;
