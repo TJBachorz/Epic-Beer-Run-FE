@@ -70,6 +70,12 @@ header > h1 {
   margin-bottom: 0px;
 }
 
+.state-subheader {
+  margin: 8px 0 4px;
+  color: #2d8f95;
+  font-size: 1.1rem;
+}
+
 .map {
   display: flex;
   justify-content: center;
@@ -101,7 +107,7 @@ svg.rsm-svg.us-map {
 
 .breweries-card-container {
   display: grid;
-  grid-template-columns: repeat(4, 300px);
+  grid-template-columns: repeat(5, 300px);
   grid-auto-rows: auto;
   grid-row-gap: 1em;
   grid-column-gap: 2em;
@@ -277,9 +283,14 @@ a, a:visited {
   padding: 16px;
   border: 1px solid #2a3d52;
   min-width: 160px;
+  height: 120px;
   cursor: grab;
   position: relative;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .destination-stop:active {
@@ -309,4 +320,77 @@ a, a:visited {
   flex-shrink: 0;
   align-self: center;
   padding: 0 4px;
+}
+
+/* Loading Screen Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0f1923;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-overlay--fade {
+  animation: overlay-fadeout 0.4s ease-out forwards;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.loading-title {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 38px;
+  color: #ffffff;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.beer-liquid {
+  transform-origin: bottom;
+  transform-box: fill-box;
+  animation: beer-fill 1.8s ease-in-out infinite alternate;
+}
+
+.beer-foam {
+  animation: foam-appear 1.8s ease-in-out infinite alternate;
+}
+
+.loading-text {
+  font-family: 'Roboto Slab', serif;
+  color: #f5a623;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin: 0;
+  animation: text-pulse 2s ease-in-out infinite;
+}
+
+@keyframes beer-fill {
+  0%   { transform: scaleY(0.05); }
+  100% { transform: scaleY(0.78); }
+}
+
+@keyframes foam-appear {
+  0%, 55% { opacity: 0; }
+  80%, 100% { opacity: 1; }
+}
+
+@keyframes text-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1; }
+}
+
+@keyframes overlay-fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }
