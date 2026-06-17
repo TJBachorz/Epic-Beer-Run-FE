@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 export default function LoadingScreen({ isLoading }) {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(isLoading);
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
@@ -29,9 +29,11 @@ export default function LoadingScreen({ isLoading }) {
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
         >
-          <clipPath id="mug-interior">
-            <rect x="12" y="23" width="58" height="99" />
-          </clipPath>
+          <defs>
+            <clipPath id="mug-interior">
+              <rect x="12" y="23" width="58" height="99" />
+            </clipPath>
+          </defs>
           <rect
             x="10" y="20" width="62" height="105"
             rx="5" fill="none"

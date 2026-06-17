@@ -23,8 +23,9 @@ describe('App loading state', () => {
   test('hides loading screen after breweries fetch resolves', async () => {
     const { queryByRole } = render(<App />);
     await act(async () => {
-      await Promise.resolve(); // flush fetch mock
-      await Promise.resolve(); // flush .then()
+      await Promise.resolve(); // fetch resolves
+      await Promise.resolve(); // response.json() resolves
+      await Promise.resolve(); // .then(data => setIsLoading(false)) runs
     });
     act(() => { jest.advanceTimersByTime(400); });
     expect(queryByRole('status')).not.toBeInTheDocument();
@@ -34,8 +35,9 @@ describe('App loading state', () => {
     global.fetch.mockRejectedValueOnce(new Error('Network error'));
     const { queryByRole } = render(<App />);
     await act(async () => {
-      await Promise.resolve();
-      await Promise.resolve();
+      await Promise.resolve(); // fetch resolves
+      await Promise.resolve(); // response.json() resolves
+      await Promise.resolve(); // .then(data => setIsLoading(false)) runs
     });
     act(() => { jest.advanceTimersByTime(400); });
     expect(queryByRole('status')).not.toBeInTheDocument();
