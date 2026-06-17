@@ -238,14 +238,117 @@ h5 > a, h5 > a:visited {
 
 .destination-name, .destination-location {
   white-space: normal;
-  font-family: 'Special Elite', cursive; 
-  margin:5px;
+  font-family: 'Roboto Slab', serif;
+  margin: 5px 0;
   text-align: center;
   font-weight: 600;
-  text-shadow: 0 0 4px white
+  text-shadow: none;
+}
+
+.destination-name a, .destination-name a:visited {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.destination-location {
+  color: #888888;
+  font-size: 11px;
+  font-weight: 400;
 }
 
 a, a:visited {
   text-decoration: none;
   color: #ffffff;
+}
+
+.roadtrip-panel {
+  background: #0f1923;
+  border: 1px solid #2a3d52;
+  border-radius: 12px;
+  padding: 32px;
+  margin: 0 auto 32px;
+  max-width: 1100px;
+}
+
+.roadtrip-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #1e2d3d;
+  margin-bottom: 24px;
+}
+
+.roadtrip-title {
+  color: #ffffff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+  margin: 0 0 4px 0;
+}
+
+.roadtrip-subtitle {
+  color: #888888;
+  font-size: 12px;
+  margin: 0;
+}
+
+.directions-button {
+  background: #f5a623;
+  border: none;
+  color: #0f1923;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Roboto Slab', serif;
+}
+
+.destination-list {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  align-items: center;
+}
+
+.destination-stop {
+  background: #1e2d3d;
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid #2a3d52;
+  min-width: 160px;
+  cursor: grab;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.destination-stop:active {
+  cursor: grabbing;
+}
+
+.stop-number {
+  color: #f5a623;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.stop-drag-handle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #555555;
+  font-size: 14px;
+}
+
+.stop-arrow {
+  color: #2a3d52;
+  font-size: 20px;
+  flex-shrink: 0;
+  align-self: center;
+  padding: 0 4px;
 }
