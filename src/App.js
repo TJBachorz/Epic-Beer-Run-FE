@@ -4,57 +4,57 @@ import Header from './components/Header';
 import MapContainer from './components/MapContainer';
 import BreweryListing from './components/BreweryListing';
 import Footer from './components/Footer';
+import LoadingScreen from './components/LoadingScreen';
 
 import './App.css';
 
 function App() {
-
-  const baseURL = process.env.REACT_APP_BASE_URL
-  const [selectedState, setSelectedState] = useState("")
-  const [breweryDB, setBreweryDB] = useState([])
-  const [coordinates, setCoordinates] = useState([])
+  const baseURL = process.env.REACT_APP_BASE_URL;
+  const [selectedState, setSelectedState] = useState("");
+  const [breweryDB, setBreweryDB] = useState([]);
+  const [coordinates, setCoordinates] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetchDataAndSetState()
-  }, [])
+    fetchDataAndSetState();
+  }, []);
 
   const fetchDataAndSetState = () => {
-    document.title = "Epic Beer Run - Map Out Your Next Great Brewery Road Trip"
+    document.title = "Epic Beer Run - Map Out Your Next Great Brewery Road Trip";
     fetch(`${baseURL}/breweries`)
       .then(response => response.json())
-      .then(data => setBreweryDB(data))
-  }
+      .then(data => {
+        setBreweryDB(data);
+        setIsLoading(false);
+      })
+      .catch(() => setIsLoading(false));
+  };
 
   const filterOutCoordinates = (longitude, latitude) => {
-    return coordinates
-      .filter(coordinate => {
-        return (coordinate[0] !== longitude) 
-          && (coordinate[1] !== latitude)
-      }
-    )
-  }
+    return coordinates.filter(coordinate =>
+      coordinate[0] !== longitude && coordinate[1] !== latitude
+    );
+  };
 
   const findBreweryCoordinates = (longitude, latitude) => {
-    return coordinates
-      .find(coordinate => {
-        return (coordinate[0] === longitude) 
-          && (coordinate[1] === latitude)
-      }
-    )
-  }
+    return coordinates.find(coordinate =>
+      coordinate[0] === longitude && coordinate[1] === latitude
+    );
+  };
 
   const logCoordinates = (brewery) => {
-    const { longitude, latitude } = brewery
+    const { longitude, latitude } = brewery;
     if (!findBreweryCoordinates(longitude, latitude)) {
-      setCoordinates([...coordinates, [longitude, latitude, brewery]])
+      setCoordinates([...coordinates, [longitude, latitude, brewery]]);
     } else {
-      setCoordinates(filterOutCoordinates(longitude, latitude))
+      setCoordinates(filterOutCoordinates(longitude, latitude));
     }
-  }
+  };
 
   return (
     <div className="App">
-      <Header/>
+      <LoadingScreen isLoading={isLoading} />
+      <Header />
       <MapContainer
         setSelectedState={setSelectedState}
         coordinates={coordinates}
@@ -66,7 +66,7 @@ function App() {
         coordinates={coordinates}
         setCoordinates={setCoordinates}
       />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
