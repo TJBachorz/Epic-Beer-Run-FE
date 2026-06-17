@@ -27,6 +27,7 @@ export default function RoadTrip({ coordinates, setCoordinates }) {
         }
 
         const migratingCoordinates = findCoordinatesByID(draggableId);
+        if (!migratingCoordinates) return;
         const newCoordinates = Array.from(coordinates);
         newCoordinates.splice(source.index, 1);
         newCoordinates.splice(destination.index, 0, migratingCoordinates);
