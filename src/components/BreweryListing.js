@@ -37,18 +37,18 @@ export default function BreweryListing(props) {
     return (
         <div className="grid-container">
             <h5 className="use-explanation">Select a state to see it's breweries:</h5>
-            {selectedState && <h3 className="state-subheader">Breweries in {selectedState}</h3>}
             <h6 className="disclaimer"><em>***only breweries with available long/lat data are provided***</em></h6>
             <div className="breweries-and-roadtrip">
                 <div className="breweries-card-container">
                     {cardMap()}
                 </div>
+                {selectedState && <h3 className="state-subheader">Breweries in {selectedState}</h3>}
                 {
-                coordinates.length !== 0 ? 
-                    <RoadTrip 
-                        setCoordinates={setCoordinates} 
+                coordinates.length !== 0 ?
+                    <RoadTrip
+                        setCoordinates={setCoordinates}
                         coordinates={coordinates}
-                    /> 
+                    />
                     : null
                 }
             </div>
