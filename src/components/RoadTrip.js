@@ -41,7 +41,13 @@ export default function RoadTrip({ coordinates, setCoordinates }) {
                     <h2 className="roadtrip-title">Your Road Trip</h2>
                     <p className="roadtrip-subtitle">Drag to reorder your stops</p>
                 </div>
-                <button className="directions-button">Get Directions ↗</button>
+                <button
+                    className="directions-button"
+                    onClick={() => {
+                        const stops = coordinates.map(c => `${c[1]},${c[0]}`).join('/');
+                        window.open(`https://www.google.com/maps/dir/${stops}`, '_blank');
+                    }}
+                >Get Directions ↗</button>
             </div>
             <DragDropContext onDragEnd={updateCoordinates}>
                 <DestinationCardContainer
