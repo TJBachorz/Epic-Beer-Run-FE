@@ -3,30 +3,15 @@ import React from 'react'
 export default function Footer() {
     return (
         <footer>
-            <h3>
-                <a target="_blank" 
-                    rel="noopener noreferrer" 
-                    href="https://github.com/TJBachorz"
-                >
-                    Github
-                </a>
-            </h3>
-            <h3>
-                <a target="_blank" 
-                    rel="noopener noreferrer" 
-                    href="https://www.linkedin.com/in/tjbachorz/"
-                >
-                    Linked-in
-                    </a>
-            </h3>
-            <h3>
-                <a target="_blank" 
-                    rel="noopener noreferrer" 
-                    href="https://github.com/TJBachorz"
-                >
-                    Email
-                </a>
-            </h3>
+            <nav className="footer-links">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/TJBachorz">GitHub</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/tjbachorz/">LinkedIn</a>
+                <a href="mailto:tjbachorz@gmail.com">Email</a>
+            </nav>
+            <p className="footer-credit">
+                TJ Bachorz &middot; Built with React, Ruby on Rails &amp;{' '}
+                <a target="_blank" rel="noopener noreferrer" href="https://www.openbrewerydb.org">OpenBreweryDB</a>
+            </p>
         </footer>
     )
 }
