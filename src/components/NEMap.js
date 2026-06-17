@@ -53,7 +53,7 @@ export default function NEMap({ setSelectedState, coordinates }) {
                             onClick={handleStateClick}
                             style={{
                                 default: {
-                                fill: "#104547",
+                                fill: "#2d8f95",
                                 outline: "none"
                                 },
                                 hover: {

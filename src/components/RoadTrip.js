@@ -3,7 +3,6 @@ import React from 'react';
 import DestinationCardContainer from './DestinationCardContainer';
 
 import { DragDropContext } from 'react-beautiful-dnd';
-import octopusImage from '../octopus-beer.jpg';
 
 export default function RoadTrip({ coordinates, setCoordinates }) {
 
@@ -21,13 +20,14 @@ export default function RoadTrip({ coordinates, setCoordinates }) {
         }
 
         if (
-            destination.droppableId === source.droppableId && 
+            destination.droppableId === source.droppableId &&
             destination.index === source.index
         ) {
             return;
         }
-        
+
         const migratingCoordinates = findCoordinatesByID(draggableId);
+        if (!migratingCoordinates) return;
         const newCoordinates = Array.from(coordinates);
         newCoordinates.splice(source.index, 1);
         newCoordinates.splice(destination.index, 0, migratingCoordinates);
@@ -35,13 +35,22 @@ export default function RoadTrip({ coordinates, setCoordinates }) {
     }
 
     return (
-        <div className="roadtrip">
-            <DragDropContext onDragEnd={updateCoordinates}>
-                <div className="road-trip-header">
-                    <h1>Your Road Trip:</h1>
-                    <img src={octopusImage} alt="Octopus holding a beer in each of its tentacles"/>
+        <div className="roadtrip-panel">
+            <div className="roadtrip-panel-header">
+                <div>
+                    <h2 className="roadtrip-title">Your Road Trip</h2>
+                    <p className="roadtrip-subtitle">Drag to reorder your stops</p>
                 </div>
-                <DestinationCardContainer 
+                <button
+                    className="directions-button"
+                    onClick={() => {
+                        const stops = coordinates.map(c => `${c[1]},${c[0]}`).join('/');
+                        window.open(`https://www.google.com/maps/dir/${stops}`, '_blank');
+                    }}
+                >Get Directions ↗</button>
+            </div>
+            <DragDropContext onDragEnd={updateCoordinates}>
+                <DestinationCardContainer
                     coordinates={coordinates}
                 />
             </DragDropContext>

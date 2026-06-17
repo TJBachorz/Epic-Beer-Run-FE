@@ -35,7 +35,7 @@ export default function HawaiiMap({ setSelectedState }) {
                             onClick={handleStateClick}
                             style={{
                                 default: {
-                                fill: "#104547",
+                                fill: "#2d8f95",
                                 outline: "none"
                                 },
                                 hover: {

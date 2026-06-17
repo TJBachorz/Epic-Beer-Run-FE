@@ -1,39 +1,30 @@
 import React from 'react';
 
 import { Droppable } from 'react-beautiful-dnd';
-import styled from 'styled-components';
 
 import DestinationCard from './DestinationCard';
 
-const DestinationList = styled.div`
-    border: 4px solid gainsboro;
-    display: flex;
-    flex-direction: row;
-    overflow: auto;
-    width: 850px;
-    margin: 20px;
-`;
-
-export default function DestinationCardContainer({coordinates}) {
+export default function DestinationCardContainer({ coordinates }) {
 
     return (
         <Droppable droppableId={"droppable-1"} direction={"horizontal"}>
             {provided => (
-                <DestinationList
+                <div
+                    className="destination-list"
                     ref={provided.innerRef}
                     {...provided.droppableProps}
                 >
-                    {coordinates.map((coordinate, index) => {
-                        return (
-                            <DestinationCard 
-                                key={coordinate[2].id}
+                    {coordinates.map((coordinate, index) => (
+                        <React.Fragment key={coordinate[2].id}>
+                            {index > 0 && <span className="stop-arrow">→</span>}
+                            <DestinationCard
                                 coordinate={coordinate}
                                 index={index}
                             />
-                        )
-                    })} 
-                    {provided.placeholder}       
-                </DestinationList>
+                        </React.Fragment>
+                    ))}
+                    {provided.placeholder}
+                </div>
             )}
         </Droppable>
     )

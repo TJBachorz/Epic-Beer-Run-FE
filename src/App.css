@@ -1,86 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Roboto+Slab:wght@500&family=Rye&family=Special+Elite&family=Syncopate:wght@400;700&display=swap");
 
 header {
-  background-image: url("https://cdn.grmag.com/wp-content/uploads/sites/113/2019/02/Beer-Month-GR-beer-glasses-bar.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
-  background-color: white;
+  background: linear-gradient(135deg, #0f1923 0%, #1e2d3d 100%);
   height: 140px;
-  font-family: 'Rye', cursive;
+  font-family: 'Syncopate', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #ffffff;
   margin-bottom: 70px;
   width: 100%;
-  border-bottom: 4px solid #104547;
+  border-bottom: 4px solid #f5a623;
 }
 
 footer {
-  background-image: url("https://www.yorkmix.com/wp-content/uploads/2018/09/empty-pint-glasses-fl.jpg");
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-position: center;
-  height: 90px;
+  background: #0f1923;
+  background-image: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color:white;
   margin-top: 70px;
   width: 100vw;
-  border-top: 4px solid #104547;
+  border-top: 2px solid #f5a623;
+  padding: 24px 0 20px;
+  gap: 12px;
 }
 
-footer > h3 > a, footer > h3 > a:visited {
-  color: wheat;
-  text-shadow: 2px 1px 4px black;
-  font-size: 24px;
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer-links > a, .footer-links > a:visited {
+  color: #f5a623;
+  text-shadow: none;
+  font-size: 16px;
   font-family: 'Roboto Slab', serif;
+  letter-spacing: 1px;
+}
+
+.footer-credit {
+  color: #888888;
+  font-size: 12px;
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.footer-credit a, .footer-credit a:visited {
+  color: #888888;
+  text-decoration: underline;
 }
 
 header > h1 {
-  font-size: 75px;
-  padding: 0px;
-  margin: 0px;
-  color: wheat;
-  text-shadow: 6px 6px #104547;
-}
-
-.top-button {
-  font-family: 'Roboto Slab', serif;
-  position: fixed;
-  color: wheat;
-  height: 40px;
-  width: 44px;
-  line-height: 45px;
-  left: 92.5%;
-  top: 87.5%;
-  background-color: #104547;
-  font-size: 30px;
-  z-index: 3;
-  border-radius: 2px;
-  border: none;
-  outline:0;
-  font-size: 45px;
-}
-
-
-.loading {
-    position: absolute;
-    height: 400px;
-    left: 30%;
-    top: 20%;
-    z-index: -1;
+  font-size: 56px;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: none;
+  letter-spacing: 4px;
+  font-weight: 700;
 }
 
 .slogan {
-  margin-top: 0px;
-  font-size: 14px;
-  color: wheat;
-  text-shadow: 2px 2px 1px #104543;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #f5a623;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: none;
 }
 
 .disclaimer {
@@ -89,6 +81,12 @@ header > h1 {
 
 .use-explanation {
   margin-bottom: 0px;
+}
+
+.state-subheader {
+  margin: 8px 0 4px;
+  color: #2d8f95;
+  font-size: 1.1rem;
 }
 
 .map {
@@ -122,11 +120,11 @@ svg.rsm-svg.us-map {
 
 .breweries-card-container {
   display: grid;
-  grid-template-columns: repeat(4, 300px);
-  grid-auto-rows: 190px;
+  grid-template-columns: repeat(5, 300px);
+  grid-auto-rows: auto;
   grid-row-gap: 1em;
   grid-column-gap: 2em;
-  border-top: 2px solid gray;
+  border-top: 2px solid #2a3d52;
   padding-top: 20px;
 }
 
@@ -138,34 +136,28 @@ svg.rsm-svg.us-map {
 }
 
 .card {
-  background-image: url("./post-card.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #1e2d3d;
+  background-image: none;
+  border-radius: 10px;
+  border-left: 3px solid #f5a623;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  box-shadow: 5px 5px #888888
-}
-
-button > img {
-  height: 30px;
-  margin: 0px;
-  padding:0px;
-  background-color: white;
+  align-items: flex-start;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .card-info {
   z-index: 2;
   display: flex;
-  width: 158px;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-top: 52px;
-  margin-right: 141px;
-  margin-bottom: 5px;
-  font-family: 'Special Elite', cursive; 
+  align-items: flex-start;
+  padding: 16px;
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  box-sizing: border-box;
 }
 
 .breweries-and-roadtrip {
@@ -174,65 +166,43 @@ button > img {
 }
 
 .card-info > p {
-  font-size: 10px;
-  width: 110px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-
+  font-size: 11px;
+  color: #888888;
+  margin: 0 0 10px 0;
+  text-align: left;
+  width: auto;
 }
 
 .marker-button {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  background: #f5a623;
+  color: #0f1923;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  width: auto;
+  height: auto;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
   align-items: center;
-  width: 40px;
-  height: 35px;
-  margin: 0px;
-  padding:0px;
-  color: white;
-  background-color: white;
-  border-radius: 5px;
+  gap: 4px;
+  line-height: 1.4;
+  position: static;
 }
 
-button > img { 
-  width:80%; 
-  height:80%; 
-  overflow:hidden;
-} 
 
 .card-info > h5 {
-  text-align: center;
+  text-align: left;
+  margin: 0 0 6px 0;
+  color: #ffffff;
 }
 
-h5 > a, a:visited {
+h5 > a, h5 > a:visited {
   text-decoration: none;
-  color: black;
-}
-
-.roadtrip {
-  font-family: 'Roboto Slab', serif;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.road-trip-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.road-trip-header > h1 {
-  margin-bottom:0px;  
-}
-
-.road-trip-header > img {
-  height: 100px;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .marker-info {
@@ -245,14 +215,196 @@ h5 > a, a:visited {
 
 .destination-name, .destination-location {
   white-space: normal;
-  font-family: 'Special Elite', cursive; 
-  margin:5px;
+  font-family: 'Roboto Slab', serif;
+  margin: 5px 0;
   text-align: center;
   font-weight: 600;
-  text-shadow: 0 0 4px white
+  text-shadow: none;
+}
+
+.destination-name a, .destination-name a:visited {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.destination-location {
+  color: #888888;
+  font-size: 11px;
+  font-weight: 400;
 }
 
 a, a:visited {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
+}
+
+.roadtrip-panel {
+  background: #0f1923;
+  border: 1px solid #2a3d52;
+  border-radius: 12px;
+  padding: 32px;
+  margin: 0 auto 32px;
+  min-width: 420px;
+  max-width: 1100px;
+}
+
+.roadtrip-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #1e2d3d;
+  margin-bottom: 24px;
+}
+
+.roadtrip-title {
+  color: #ffffff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+  margin: 0 0 4px 0;
+}
+
+.roadtrip-subtitle {
+  color: #888888;
+  font-size: 12px;
+  margin: 0;
+}
+
+.directions-button {
+  background: #f5a623;
+  border: none;
+  color: #0f1923;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Roboto Slab', serif;
+}
+
+.destination-list {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  align-items: center;
+}
+
+.destination-stop {
+  background: #1e2d3d;
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid #2a3d52;
+  min-width: 160px;
+  height: 120px;
+  cursor: grab;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.destination-stop:active {
+  cursor: grabbing;
+}
+
+.stop-number {
+  color: #f5a623;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.stop-drag-handle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #555555;
+  font-size: 14px;
+}
+
+.stop-arrow {
+  color: #2a3d52;
+  font-size: 20px;
+  flex-shrink: 0;
+  align-self: center;
+  padding: 0 4px;
+}
+
+/* Loading Screen Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0f1923;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-overlay--fade {
+  animation: overlay-fadeout 0.4s ease-out forwards;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.loading-title {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 38px;
+  color: #ffffff;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.beer-liquid {
+  transform-origin: bottom;
+  transform-box: fill-box;
+  animation: beer-fill 1.8s ease-in-out infinite alternate;
+}
+
+.beer-foam {
+  animation: foam-appear 1.8s ease-in-out infinite alternate;
+}
+
+.loading-text {
+  font-family: 'Roboto Slab', serif;
+  color: #f5a623;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin: 0;
+  animation: text-pulse 2s ease-in-out infinite;
+}
+
+@keyframes beer-fill {
+  0%   { transform: scaleY(0.05); }
+  100% { transform: scaleY(0.78); }
+}
+
+@keyframes foam-appear {
+  0%, 55% { opacity: 0; }
+  80%, 100% { opacity: 1; }
+}
+
+@keyframes text-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1; }
+}
+
+@keyframes overlay-fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }
