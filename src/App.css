@@ -17,22 +17,43 @@ header {
 footer {
   background: #0f1923;
   background-image: none;
-  height: 90px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-top: 70px;
   width: 100vw;
   border-top: 2px solid #f5a623;
+  padding: 24px 0 20px;
+  gap: 12px;
 }
 
-footer > h3 > a, footer > h3 > a:visited {
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer-links > a, .footer-links > a:visited {
   color: #f5a623;
   text-shadow: none;
   font-size: 16px;
   font-family: 'Roboto Slab', serif;
   letter-spacing: 1px;
+}
+
+.footer-credit {
+  color: #888888;
+  font-size: 12px;
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.footer-credit a, .footer-credit a:visited {
+  color: #888888;
+  text-decoration: underline;
 }
 
 header > h1 {
@@ -223,6 +244,7 @@ a, a:visited {
   border-radius: 12px;
   padding: 32px;
   margin: 0 auto 32px;
+  min-width: 420px;
   max-width: 1100px;
 }
 
