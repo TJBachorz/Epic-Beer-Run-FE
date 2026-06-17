@@ -146,10 +146,6 @@ svg.rsm-svg.us-map {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
-button > img {
-  display: none;
-}
-
 .card-info {
   z-index: 2;
   display: flex;
