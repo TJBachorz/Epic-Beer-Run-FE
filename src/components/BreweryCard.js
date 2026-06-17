@@ -19,7 +19,7 @@ export default function BreweryCard({ brewery, logCoordinates }) {
                 </h5>
                 <p>{`${brewery.city}, ${brewery.state}`}</p>
                 <button className="marker-button" onClick={handleClick}>
-                    📍 Pin
+                    <span role="img" aria-label="pin">📍</span> Pin
                 </button>
             </div>
         </section>
