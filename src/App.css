@@ -45,24 +45,6 @@ header > h1 {
   font-weight: 700;
 }
 
-.top-button {
-  font-family: 'Roboto Slab', serif;
-  position: fixed;
-  color: #0f1923;
-  height: 40px;
-  width: 44px;
-  line-height: 45px;
-  left: 92.5%;
-  top: 87.5%;
-  background-color: #f5a623;
-  z-index: 3;
-  border-radius: 2px;
-  border: none;
-  outline: 0;
-  font-size: 45px;
-}
-
-
 .loading {
     position: absolute;
     height: 400px;

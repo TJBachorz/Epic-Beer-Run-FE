@@ -52,26 +52,20 @@ function App() {
     }
   }
 
-  const scrollToTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-
   return (
     <div className="App">
       <Header/>
-      <MapContainer 
-        setSelectedState={setSelectedState} 
+      <MapContainer
+        setSelectedState={setSelectedState}
         coordinates={coordinates}
       />
-      <BreweryListing 
-        breweries={breweryDB} 
+      <BreweryListing
+        breweries={breweryDB}
         selectedState={selectedState}
         logCoordinates={logCoordinates}
         coordinates={coordinates}
         setCoordinates={setCoordinates}
       />
-      <button className="top-button" onClick={scrollToTop}>^</button>
       <Footer/>
     </div>
   );
