@@ -36,15 +36,18 @@ export default function HawaiiMap({ setSelectedState }) {
                             style={{
                                 default: {
                                 fill: "#2d8f95",
-                                outline: "none"
+                                outline: "none",
+                                cursor: "pointer"
                                 },
                                 hover: {
                                 fill: "#FF9E0A",
-                                outline: "none"
+                                outline: "none",
+                                cursor: "pointer"
                                 },
                                 pressed: {
                                 fill: "#f3bd6a",
-                                outline: "none"
+                                outline: "none",
+                                cursor: "pointer"
                                 }
                             }}
                         />
