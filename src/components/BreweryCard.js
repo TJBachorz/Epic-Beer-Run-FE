@@ -10,12 +10,17 @@ export default function BreweryCard({ brewery, logCoordinates }) {
         <section className={`card ${brewery.name}`}>
             <div className="card-info">
                 <h5>
-                    <a href={brewery.website_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        {brewery.name}
-                    </a>
+                    {brewery.website_url ? (
+                        <a href={brewery.website_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {brewery.name}
+                            <span className="external-link-icon" aria-hidden="true">↗</span>
+                        </a>
+                    ) : (
+                        <span className="name-no-link">{brewery.name}</span>
+                    )}
                 </h5>
                 <p>{`${brewery.city}, ${brewery.state}`}</p>
                 <button className="marker-button" onClick={handleClick}>

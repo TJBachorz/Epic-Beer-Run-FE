@@ -203,6 +203,22 @@ h5 > a, h5 > a:visited {
   text-decoration: none;
   color: #ffffff;
   font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+h5 > a:hover, h5 > a:focus {
+  color: #f5a623;
+  text-decoration: underline;
+}
+
+.external-link-icon {
+  font-size: 0.75em;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.name-no-link {
+  color: #888888;
 }
 
 .marker-info {
@@ -225,6 +241,12 @@ h5 > a, h5 > a:visited {
 .destination-name a, .destination-name a:visited {
   color: #ffffff;
   font-size: 13px;
+  transition: color 0.15s ease;
+}
+
+.destination-name a:hover, .destination-name a:focus {
+  color: #f5a623;
+  text-decoration: underline;
 }
 
 .destination-location {

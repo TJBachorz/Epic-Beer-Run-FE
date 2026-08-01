@@ -26,12 +26,17 @@ export default function DestinationCard({ coordinate, index }) {
                     <div className="stop-number">Stop {index + 1}</div>
                     <div className="marker-info">
                         <p className="destination-name">
-                            <a href={coordinate[2].website_url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {coordinate[2].name}
-                            </a>
+                            {coordinate[2].website_url ? (
+                                <a href={coordinate[2].website_url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {coordinate[2].name}
+                                    <span className="external-link-icon" aria-hidden="true">↗</span>
+                                </a>
+                            ) : (
+                                <span className="name-no-link">{coordinate[2].name}</span>
+                            )}
                         </p>
                         <p className="destination-location">
                             {`${coordinate[2].city}, ${coordinate[2].state}`}
