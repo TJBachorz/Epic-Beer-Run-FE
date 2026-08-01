@@ -85,8 +85,10 @@ header > h1 {
 
 .state-subheader {
   margin: 8px 0 4px;
+  padding: 0 24px;
   color: #2d8f95;
   font-size: 1.1rem;
+  box-sizing: border-box;
 }
 
 .map {
@@ -120,12 +122,14 @@ svg.rsm-svg.us-map {
 
 .breweries-card-container {
   display: grid;
-  grid-template-columns: repeat(5, 300px);
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   grid-auto-rows: auto;
   grid-row-gap: 1em;
   grid-column-gap: 2em;
   border-top: 2px solid #2a3d52;
-  padding-top: 20px;
+  padding: 20px 24px 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .grid-container {
@@ -163,6 +167,8 @@ svg.rsm-svg.us-map {
 .breweries-and-roadtrip {
   display: flex;
   flex-direction: column-reverse;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card-info > p {
